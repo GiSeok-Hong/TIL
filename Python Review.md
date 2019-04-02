@@ -48,3 +48,5 @@ print(test2)
 ![img](https://datascienceschool.net/upfiles/6b6900ff54194f87b8e72db23b340165.png)
 
 ![image](https://user-images.githubusercontent.com/48499094/55394886-582a0d00-557b-11e9-9163-67ec764fb032.png)
+
+![1554200173932](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1554200173932.png)
