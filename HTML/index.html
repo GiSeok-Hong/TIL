@@ -2,7 +2,45 @@
 <html>
     <head>
         <title>Hello World!</title>
+        <style>
+            /* CSS Comment  or // */
 
+            /* 1. tag name */
+            header {
+                color : red;
+                font-size: 20px;
+            }
+
+            /* 2. select all */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* 3. id selector*/
+            #foot {
+                background-color: black;
+                color: white
+            }
+
+            /* 4. class selector */
+            .art {
+                font-size: 30px;
+                color : green;
+            }
+
+            /* 5. parent child */
+            ol > li {
+                color :yellow;
+            }
+            p b {
+                color : gray;
+            }
+
+
+            /* 6. */
+        </style>
+        <link rel="stylesheet" href="index.css">
 
     </head>
     <body>
@@ -10,17 +48,17 @@
 
         <!--  시맨틱 태그      -->
         <header id = "header">Header</header>
-        <nav>Nav</nav>
+        <nav style="color: blue;">Nav</nav>
         <aside>aside</aside>
         <section>
             section
-            <article>article1</article>
-            <article>article2</article>
-            <article>article3</article>
-            <article>article4</article>
+            <article class="art">article1</article>
+            <article class="art">article2</article>
+            <article class="art">article3</article>
+            <article class="art">article4</article>
         </section>
         <article>article</article>
-        <footer>footer</footer>
+        <footer id ="foot">footer</footer>
 
         <!--  non semantic tag      -->
         <div>
@@ -83,9 +121,27 @@
         </ul>
 
         <!-- 링크 태그       -->
-        <a href="https://google.com">구글로 가즈아!</a><br>
+        <a href="https://google.com" target="_blank">구글로 가즈아!</a><br>
         <a href="index2.html">index2로 가기</a><br>
-        <a href="#header">header로 가기</a>
+        <a href="#header">header로 가기</a><br>
+        <a href="mailto:hgsok3056@gmail.com">메일 쓰기</a><br>
+
+        <!-- 미디어 파일 -->
+        <!-- 사진 -->
+        <img src="meat.jfif" alt="와규" width="200px" height="200px">
+
+        <!-- 비디오 -->
+        <!--<video src=""></video> -->
+
+        <!-- iframe   -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/e5tWXv98kUM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <!-- Form -->
+        <form action="index2.html">
+            <input type="text" name="username">
+            <input type="password" name="password">
+            <input type="submit">
+        </form>
 
 
 
