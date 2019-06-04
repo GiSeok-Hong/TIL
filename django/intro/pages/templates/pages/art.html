@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>ASCII ART에 오신 것을 환영합니다. ^-^ 꺄륵 </h1><br>
+
+    <form action="/pages/result/" method="get">
+        <input type="text" name="word" placeholder="영어단어를 입력해주세요">
+        <input type="submit" value="submit">
+    </form>
+{% endblock %}
