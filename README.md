@@ -7,3 +7,4 @@ https://gist.github.com/ihoneymon/652be052a0727ad59601
 ***
 ### Django
 [Django-Intro 2019년 6월 3일](https://github.com/GiSeok-Hong/TIL/blob/master/django/2019.06.03.md)
+[Django-Intro2 2019년 6월 4일](https://github.com/GiSeok-Hong/TIL/blob/master/django/2019.06.04.md)
