@@ -10,4 +10,4 @@ https://gist.github.com/ihoneymon/652be052a0727ad59601
 
 [Django-Intro2 2019년 6월 4일](https://github.com/GiSeok-Hong/TIL/blob/master/django/2019.06.04.md)
 
-[Django-DB 2019년 6월 4](https://github.com/GiSeok-Hong/TIL/blob/master/django/2019.06.04%20-%20DB.md)
+[Django-DB 2019년 6월 4일](https://github.com/GiSeok-Hong/TIL/blob/master/django/2019.06.04%20-%20DB.md)
