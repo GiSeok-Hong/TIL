@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Board
+from .models import Board, Comment
 
 def index(request):
     # boards = Board.objects.order_by('-id')
@@ -8,33 +8,50 @@ def index(request):
     return render(request, 'boards/index.html', context)
 
 def new(request):
-    return render(request, 'boards/new.html')
+    if request.method == 'POST':                    # 요청의 method가 post 이면 글을 써줘
+        title = request.POST.get('title')           # 요청이 get이면 html 파일을 줘
+        content = request.POST.get('content')
+        board = Board(title=title, content=content)
+        board.save()
+        print(request.method)
+        return redirect('boards:detail', board.pk)
+    else:
+        return render(request, 'boards/new.html')
 
-def create(request):    # new에서 생성한 데이터를 받는 함수
-    title = request.POST.get('title')
-    content = request.POST.get('content')
-    board = Board(title=title, content=content)
-    board.save()
-    return redirect(f'/boards/{board.pk}/')
-
-def detail(request, pk):
-    board = Board.objects.get(pk=pk)
-    context = {'board': board}
+def detail(request, board_pk):
+    board = Board.objects.get(pk=board_pk)
+    comments = board.comment_set.all()   # comments = Comment.objects.filter(board=board)  --> 이건 문제가 생김
+    context = {'board': board, 'comments': comments}
     return render(request, 'boards/detail.html', context)
 
-def delete(request, pk):
-    board = Board.objects.get(pk=pk)
-    board.delete()
-    return redirect('/boards/')
+def delete(request, board_pk):                # html의 a 태그는 get 방식만 있다.
+    board = Board.objects.get(pk=board_pk)
+    if request.method == 'POST':
+        board.delete()
+        return redirect('boards:index')
+    else:
+        return redirect('boards:detail', board.pk)
 
-def edit(request, pk):
-    board = Board.objects.get(pk=pk)
-    context = {'board': board}
-    return render(request, 'boards/edit.html', context)
+def edit(request, board_pk):
+    board = Board.objects.get(pk=board_pk)
+    if request.method == 'GET':
+        print(request.method)
+        context = {'board': board}
+        return render(request, 'boards/edit.html', context)
+    else:
+        print(request.method)
+        board.title = request.POST.get('title')
+        board.content = request.POST.get('content')
+        board.save()
+        return redirect('boards:detail', board.pk)
 
-def update(request, pk):
-    board = Board.objects.get(pk=pk)
-    board.title = request.POST.get('title')
-    board.content = request.POST.get('content')
-    board.save()
-    return redirect(f'/boards/{board.pk}/')
+def comments_create(request, board_pk):
+    board = Board.objects.get(pk=board_pk)
+    if request.method == 'POST':
+        comment = Comment()
+        comment.board_id = board.pk
+        comment.content = request.POST.get('content')
+        comment.save()
+        return redirect('boards:detail', board.pk)
+    else:
+        return redirect('boards:detail', board.pk)
