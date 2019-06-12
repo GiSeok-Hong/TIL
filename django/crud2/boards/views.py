@@ -55,3 +55,5 @@ def comments_create(request, board_pk):
         return redirect('boards:detail', board.pk)
     else:
         return redirect('boards:detail', board.pk)
+
+def comments_edit(request, board_pk, comment_pk):
