@@ -22,4 +22,4 @@ class Comment(models.Model):
 
 # python manage.py shell_plus
 
-#  board.comment_set.all()
+# board.comment_set.all()

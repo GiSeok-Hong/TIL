@@ -18,10 +18,19 @@
     </form>
 
     <hr>
-        <p><b>댓글 목록</b></p>
+        <p><b>댓글 목록 | 댓글 개수: {{ comments|length }}</b></p>
         {% for comment in comments %}
-            <li>{{ comment.content }}</li>
+            <form action="{% url 'boards:comments_delete' board.pk comment.pk %}" method="post">
+                {% csrf_token %}
+                <li>{{ comment.content }} <a href="{% url 'boards:comments_edit' board.pk comment.pk %}">
+                    <input type="button" value="수정"></a>
+                    <input type="submit" value="삭제">
+                </li>
+            </form>
+        {% empty %}
+            <p><b>댓글이 없습니다.</b></p>
         {% endfor %}
+
     <hr>
 
     <form action="{% url 'boards:delete' board.pk %}" method="post">

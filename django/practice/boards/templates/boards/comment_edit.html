@@ -1,0 +1,16 @@
+{% extends 'boards/base.html' %}
+
+{% block body %}
+
+<h1 align="center">댓글 수정 하기</h1>
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="content">내용</label><br>
+    <textarea name="content" id="content" cols="30" rows="10">{{ comment.content }}</textarea><br>
+    <input type="submit" value="수정">
+    <a href="{% url 'boards:index' %}"><input type="button" value="메인"></a>
+</form>
+
+
+{% endblock %}

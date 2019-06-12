@@ -1,0 +1,42 @@
+{% extends 'boards/base.html' %}
+
+{% block body%}
+
+<h1 align="center">상세 페이지</h1>
+<hr>
+<p>제목 : {{ board.title }}</p>
+<p>내용 : {{ board.content }}</p>
+<p>작성시간 : {{ board.created_at }}</p>
+<p>수정시간 : {{ board.updated_at }}</p>
+
+<hr>
+<form action="{% url 'boards:comment_create' board.pk %}" method="post">
+    {% csrf_token %}
+    <label for="comment">댓글 : </label>
+    <input type="text" name="content" id="comment" placeholder="댓글을 입력하세요">
+    <input type="submit" value="등록">
+</form>
+
+<hr>
+    <h5>댓글목록</h5>
+    {% for comment in comments %}
+        <form action="{% url 'boards:comment_delete' board.pk comment.pk %}" method="post">
+        {% csrf_token %}
+            <li> {{ comment.content }}
+                <a href="{% url 'boards:comment_edit' board.pk comment.pk %}"><input type="button" value="수정"></a>
+                <input type="submit" value="삭제"></li>
+        </form>
+    {% endfor %}
+
+
+<hr>
+<form action="{% url 'boards:delete' board.pk %}" method="post">
+    {% csrf_token %}
+    <a href="{% url 'boards:index' %}"><input type="button" value="메인"></a>
+    <a href="{% url 'boards:edit' board.pk %}"><input type="button" value="수정"></a>
+    <input type="submit" value="삭제">
+</form>
+
+{% endblock %}
+
+
