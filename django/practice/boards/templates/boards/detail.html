@@ -1,4 +1,5 @@
 {% extends 'boards/base.html' %}
+{% load static %}
 
 {% block body%}
 
@@ -25,18 +26,33 @@
             <li> {{ comment.content }}
                 <a href="{% url 'boards:comment_edit' board.pk comment.pk %}"><input type="button" value="수정"></a>
                 <input type="submit" value="삭제"></li>
+            {% empty %}
+                <p><b>댓글이 없습니다</b></p>
         </form>
     {% endfor %}
 
-
 <hr>
+<!-- 아래처럼 조건문을 걸지 않으면 이미지가 없는 게시글에서는 오류가 난다. -->
+{% if board.image %}
+    <!-- DB에 저장된 이미지 주소를 가져온다 -->
+    <h3>원본 이미지</h3>
+        <img src="{{ board.image.url }}" alt="{{ board.image }}">
+    <h3>썸네일 이미지</h3>
+        <img src="{{ board.image_thumbnail.url }}" alt="{{ board.thumbnail }}">
+{% else %}
+    <img src="{% static 'boards/images/sea.jpg' %}" alt="">
+
+{% endif %}
+<hr>
+
+
 <form action="{% url 'boards:delete' board.pk %}" method="post">
     {% csrf_token %}
     <a href="{% url 'boards:index' %}"><input type="button" value="메인"></a>
     <a href="{% url 'boards:edit' board.pk %}"><input type="button" value="수정"></a>
     <input type="submit" value="삭제">
 </form>
-
+<br><br><br>
 {% endblock %}
 
 

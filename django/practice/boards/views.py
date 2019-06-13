@@ -10,7 +10,8 @@ def new(request):
     if request.method == 'POST':
         title = request.POST.get('title')
         content = request.POST.get('content')
-        board = Board(title=title, content=content)
+        image = request.FILES.get('image')
+        board = Board(title=title, content=content, image=image)
         board.save()
         return redirect('boards:index')
     else:
@@ -35,6 +36,7 @@ def edit(request, board_pk):
     if request.method == 'POST':
         board.title = request.POST.get('title')
         board.content = request.POST.get('content')
+        board.image = request.FILES.get('image')
         board.save()
         return redirect('boards:detail', board.pk)
     else:
