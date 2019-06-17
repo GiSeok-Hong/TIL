@@ -1,0 +1,24 @@
+{% extends 'movies/base.html' %}
+{% block body %}
+
+<h1 align="center">{{ movie.pk }}번 영화 Detail Page</h1>
+<hr>
+<p>영화명 : {{ movie.title }}</p>
+<p>영화명(원문) : {{ movie.title_origin }}</p>
+<p>TMDB 투표수 : {{ movie.vote_count }}</p>
+<p>개봉일 : {{ movie.open_date }}</p>
+<p>장르 : {{ movie.genre }}</p>
+<p>평점 : {{ movie.score }}</p>
+<p>포스터 이미지 URL : {{ movie.poster_url }}</p>
+<p>영화소개 : {{ movie.description }}</p>
+<br>
+<hr>
+<form action="/movies/{{ movie.pk }}/delete/" method="post">
+    {% csrf_token %}
+    <a href="/movies/"><input type="button"value="목록"></a>
+    <a href="/movies/{{ movie.pk }}/update/"><input type="button" value="수정"></a>
+    <input type="submit" value="삭제">
+</form>
+
+
+{% endblock %}

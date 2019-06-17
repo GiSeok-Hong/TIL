@@ -1,0 +1,20 @@
+{% extends 'boards/base.html' %}
+
+{% block body %}
+<h1 align="center">Create</h1>
+<hr>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+
+    <hr>
+    <input type="submit" value="등록">
+    <a href="{% url 'boards:index' %}"><input type="button" value="메인"></a>
+</form>
+
+
+
+{% endblock %}

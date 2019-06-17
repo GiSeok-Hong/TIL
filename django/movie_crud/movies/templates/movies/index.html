@@ -1,0 +1,15 @@
+{% extends 'movies/base.html' %}
+{% block body %}
+
+<h1 align="center">Index Page</h1>
+<hr>
+<a href="/movies/create/"><input type="button" value="등록"></a>
+<hr>
+    {% for movie in movies %}
+        <p>번호 : {{ movie.pk }}</p>
+        <p>영화명 :<a href="/movies/{{ movie.pk }}/"> {{ movie.title }}</a></p> <!-- 클릭시 상세 링크로 -->
+        <p>평점 : {{ movie.score }}</p>
+        <hr>
+    {% endfor %}
+
+{% endblock%}

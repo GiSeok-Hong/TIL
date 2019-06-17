@@ -16,7 +16,7 @@ def new(request):
         print(request.method)
         return redirect('boards:detail', board.pk)
     else:
-        return render(request, 'boards/new.html')
+        return render(request, 'boards/create.html')
 
 def detail(request, board_pk):
     board = Board.objects.get(pk=board_pk)

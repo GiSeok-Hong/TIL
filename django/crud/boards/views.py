@@ -8,10 +8,10 @@ def index(request):
     return render(request, 'boards/index.html', context) # templates 안의 boards 폴더에 있는 index.html을 랜더하겠다.
 
 def new(request):
-    return render(request, 'boards/new.html')
+    return render(request, 'boards/create.html')
 
 def create(request):
-    title = request.POST.get('title')           # new.html 에서 가져온 title
+    title = request.POST.get('title')           # create.html 에서 가져온 title
     content = request.POST.get('content')
 
     # board = Board()   # Board 라는 클래스에서 board라는 인스턴스 생성
