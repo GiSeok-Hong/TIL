@@ -13,14 +13,17 @@ def create(request):
         form = BoardForm(request.POST)
         # embed() # embed 를 쓰고 실행하면 여기에서 동작이 멈춘다.
         if form.is_valid():    # 유효성 검사?
-            title = form.cleaned_data.get('title')
-            content = form.cleaned_data.get('content')
-            board = Board.objects.create(title=title, content=content)
+            board = form.save()
+
+            # 아래는 form 형식
+            # title = form.cleaned_data.get('title')   # dic 형식의
+            # content = form.cleaned_data.get('content')
+            # board = Board.objects.create(title=title, content=content)
             return redirect('boards:detail', board.pk)
     else:
         form = BoardForm()
-    content = {'form': form}
-    return render(request, 'boards/create.html', content)
+    context = {'form': form}
+    return render(request, 'boards/form.html', context)
 
 def detail(request, board_pk):
     # board = Board.objects.get(pk=board_pk)
@@ -38,13 +41,16 @@ def delete(request, board_pk):
 def update(request, board_pk):
     board = get_object_or_404(Board, pk=board_pk)
     if request.method == 'POST':
-        form = BoardForm(request.POST)
+        form = BoardForm(request.POST, instance=board)   # model form 을 사용하기 위해 instance 추가
         if form.is_valid():
-            board.title = form.cleaned_data.get('title')
-            board.content = form.cleaned_data.get('content')
-            board.save()
+            form.save()
+            # 아래 코드는 form 형식
+            # board.title = form.cleaned_data.get('title')
+            # board.content = form.cleaned_data.get('content')
+            # board.save()
             return redirect('boards:detail', board.pk)
     else:
-        form = BoardForm(initial=board.__dict__)    # 사용자가 작성했던 내용을 가져온다.
-    context = {'form': form}
-    return render(request, 'boards/create.html', context)
+        # form = BoardForm(initial=board.__dict__)    # 사용자가 작성했던 내용을 가져온다.
+        form = BoardForm(instance=board)
+    context = {'form': form, 'board': board}
+    return render(request, 'boards/form.html', context)

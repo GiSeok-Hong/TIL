@@ -9,6 +9,11 @@
         <a href="{% url 'boards:detail' board.pk %}">[글 상세보기]</a>
         <hr>
     {% endfor %}
-    <a href="{% url 'boards:create' %}"><input type="button" value="글작성"></a>
 
+    {% if user.is_authenticated %}
+        <a href="{% url 'boards:create' %}"><input type="button" value="글작성"></a>
+    {% else %}
+        <a href="{% url 'accounts:login' %}">로그인이 필요합니다</a>
+    {% endif %}
+<br><br>
 {% endblock %}

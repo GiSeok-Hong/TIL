@@ -21,7 +21,7 @@ def create(request):
         movie.save()
         return redirect(f'/movies/{movie.pk}/')
     else:
-        return render(request, 'movies/create.html')
+        return render(request, 'movies/form.html')
 
 def detail(request, movie_pk):
     movie = Movie.objects.get(pk=movie_pk)
