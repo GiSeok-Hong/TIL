@@ -1,5 +1,5 @@
 from django import forms
-from .models import Board    # Model Form 을 사용하기 위해 import 한다.
+from .models import Board, Comment    # Model Form 을 사용하기 위해 import 한다.
 
 class BoardForm(forms.ModelForm):
     title = forms.CharField(
@@ -25,6 +25,14 @@ class BoardForm(forms.ModelForm):
     class Meta:
         model = Board
         fields = ['title', 'content',]
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['content',]
+
+
+
 
 # class BoardForm(forms.Form):
 #     title = forms.CharField(

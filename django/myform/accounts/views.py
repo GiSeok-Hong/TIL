@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm, PasswordChangeForm
 from .forms import UserCustomChangeForm
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
+from django.contrib.auth import update_session_auth_hash # 190619 추가
+
+
 
 def signup(request):
     if request.user.is_authenticated:             # 만약 로그인이 된 상태이면 바로 index 페이지로 보내버림
@@ -25,11 +28,11 @@ def login(request):
         form = AuthenticationForm(request, request.POST)
         if form.is_valid():
             auth_login(request, form.get_user())
-            return redirect('boards:index')
+            return redirect(request.GET.get('next') or 'boards:index')   # 190619
     else:
         form = AuthenticationForm()
     context ={'form': form}
-    return render(request, 'accounts/login.html', context)
+    return render(request, 'accounts/auth_form.html', context)
 
 def logout(request):
     if request.method == 'POST':
@@ -54,4 +57,17 @@ def edit(request):
     else:
         form = UserCustomChangeForm(instance=request.user)
     context = {'form': form}
-    return render(request, 'accounts/edit.html', context)
+    return render(request, 'accounts/auth_form.html', context)
+
+# 190619 추가
+def change_password(request):
+    form = PasswordChangeForm(request.user, request.POST)
+    if form.is_valid():
+        user = form.save()
+        update_session_auth_hash(request, user)   # 비밀번호가 변경되어도 '나'라고 알림
+        form.save()
+        return redirect('boards:index')
+    else:
+        form = PasswordChangeForm(request.user)
+    context = {'form': form}
+    return render(request, 'accounts/auth_form.html', context)
