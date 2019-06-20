@@ -23,7 +23,7 @@
     {% if request.resolver_match.url_name == 'create' %}
         <a href="{% url 'boards:index' %}" class="btn btn-primary">메인페이지</a>
     {% else %}
-       <a href="{% url 'boards:detail' board.pk %}" class="btn btn-primary">상세페이지</a>
+        <a href="{% url 'boards:detail' board.pk %}" class="btn btn-primary">상세페이지</a>
     {% endif %}
 
 </form>
