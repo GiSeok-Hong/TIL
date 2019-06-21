@@ -22,6 +22,11 @@
     {% empty %}
         <p>댓글이 없습니다</p>
     {% endfor %}
+
+    <hr>
+    {% include 'boards/_profile.html' %}
+    <hr>
+
 {% else %}
     <a href="{% url 'accounts:login' %}">로그인이 필요합니다</a>
 {% endif %}

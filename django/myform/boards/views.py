@@ -3,6 +3,7 @@ from .models import Board, Comment
 from .forms import BoardForm, CommentForm
 from IPython import embed  # Debuging 할 때 사용한다
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import get_user_model
 from django.views.decorators.http import require_POST
 
 def index(request):
@@ -32,12 +33,14 @@ def create(request):
 def detail(request, board_pk):
     # board = Board.objects.get(pk=board_pk)
     board = get_object_or_404(Board, pk=board_pk)
+    person = get_object_or_404(get_user_model(), pk=board.user.pk)
     comments = board.comment_set.all()
     comment_form = CommentForm()
     context = {
         'board': board,
         'comments': comments,
         'comment_form': comment_form,
+        'person': person
     }
     return render(request, 'boards/detail.html', context)
 
@@ -99,3 +102,17 @@ def like(request, board_pk):
     else:
         board.like_users.add(request.user)
     return redirect('boards:index')
+
+
+# 팔로우 : 특정 대상을 팔로우하는 경우 그 대상의 소식을 만날 수 있습니다.
+# 팔로워 : 나 또는 특정 대상을 팔로우하는 사람을 뜻합니다.
+# 팔로잉 : 나 또는 특정 대상이 팔로우하는 사람을 뜻합니다.
+@login_required()
+def follow(request, board_pk, user_pk):
+    person = get_object_or_404(get_user_model(), pk=user_pk)
+    if request.user in person.followers.all():
+        person.followers.remove(request.user)
+    else:
+        person.followers.add(request.user)
+    return redirect('boards:detail', board_pk)
+
