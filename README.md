@@ -22,3 +22,5 @@ https://meaownworld.tistory.com/78
 [Django-Improve CRUD 2019년 6월 11일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.11%20-%20improve%20boards.md)
 
 [Django-Images 2019년 6월 13일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.13%20-%20images.md)
+
+[Django-Like 2019년 6월 20일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.20%20-like.md)
