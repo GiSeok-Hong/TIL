@@ -26,3 +26,5 @@ https://meaownworld.tistory.com/78
 [Django-Like 2019년 6월 20일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.20%20-like.md)
 
 [Django-Follow 2019년 6월 21일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.21%20-follow.md)
+
+[Django- 2019년 6월 26일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.26%20-%20Django%20App%20%20%EC%9B%B9%20%EB%B0%B0%ED%8F%AC.md)
