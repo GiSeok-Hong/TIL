@@ -8,6 +8,8 @@ https://gist.github.com/ihoneymon/652be052a0727ad59601
 #### Github - Git bash 터미널 계정 변경 참고
 https://meaownworld.tistory.com/78
 ***
+[Practice Telegram_Bot 2019년 5월 30일](https://github.com/GiSeok-Hong/TIL/blob/master/telegram_bot/190530.md)
+***
 ### Django
 [Django-Intro 2019년 6월 3일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.03.md)
 
