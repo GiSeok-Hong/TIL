@@ -3,7 +3,9 @@
 
 ## 1장. [서울시 구별 CCTV 현황 분석](https://nbviewer.jupyter.org/github/GiSeok-Hong/Python/blob/master/DataScience/source_code/01-1.%20%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EA%B5%AC%EB%B3%84%20CCTV%20%ED%98%84%ED%99%A9%20%EB%B6%84%EC%84%9D.ipynb)
 #### 목표
-
+* 서울시의 구별 CCTV 현황을 분석한다.
+* 어디에 CCTV가 많이 설치됐는지부터 구별 인구 대비 비율을 확인하는 것까지 진행한다.
+* 파이썬의 기초를 학습하고, pandas와 Matplotlib의 기초에 대해 익히기.
 
 ## 2장. [서울시 범죄 현황 분석](https://nbviewer.jupyter.org/github/GiSeok-Hong/Python/blob/master/DataScience/source_code/02-1.%20%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EB%B2%94%EC%A3%84%20%ED%98%84%ED%99%A9%20%EB%B6%84%EC%84%9D.ipynb)
 #### 목표
