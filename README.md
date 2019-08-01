@@ -3,7 +3,7 @@
 ### 1. DataScience - 파이썬으로 데이터 주무르기 (2019.07.04~)
 * [파이썬으로 데이터 주무르기 저자 Github](https://github.com/PinkWink/DataScience)
 
-#### 1장. [서울시 구별 CCTV 현황 분석](https://nbviewer.jupyter.org/github/GiSeok-Hong/Python/blob/master/DataScience/source_code/01-1.%20%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EA%B5%AC%EB%B3%84%20CCTV%20%ED%98%84%ED%99%A9%20%EB%B6%84%EC%84%9D.ipynb)
+* #### 1장. [서울시 구별 CCTV 현황 분석](https://nbviewer.jupyter.org/github/GiSeok-Hong/Python/blob/master/DataScience/source_code/01-1.%20%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EA%B5%AC%EB%B3%84%20CCTV%20%ED%98%84%ED%99%A9%20%EB%B6%84%EC%84%9D.ipynb)
 
 #### 2장. [서울시 범죄 현황 분석](https://nbviewer.jupyter.org/github/GiSeok-Hong/Python/blob/master/DataScience/source_code/02-1.%20%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EB%B2%94%EC%A3%84%20%ED%98%84%ED%99%A9%20%EB%B6%84%EC%84%9D.ipynb)
 
