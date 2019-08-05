@@ -52,7 +52,7 @@
 
 
 
-## 7장. [시계열 데이터를 다뤄보자]()
+## 7장. [시계열 데이터를 다뤄보자](https://nbviewer.jupyter.org/github/GiSeok-Hong/Python/blob/master/DataScience/source_code/07-1.%20%EC%8B%9C%EA%B3%84%EC%97%B4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC%20%EB%8B%A4%EB%A4%84%EB%B3%B4%EA%B8%B0.ipynb)
 
 #### 목표
 
