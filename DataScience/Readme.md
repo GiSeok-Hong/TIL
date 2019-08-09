@@ -58,3 +58,11 @@
 
 * Fbprophet 모델을 사용하여 시계열 예측을 해보기
 * 주식 데이터를 가져오는데 문제가 있어서 7-3부분은 넘어감
+
+
+
+## 8장. [자연어 처리 시작하기](https://nbviewer.jupyter.org/github/GiSeok-Hong/Python/blob/master/DataScience/source_code/08-1.%20%EC%9E%90%EC%97%B0%EC%96%B4%20%EC%B2%98%EB%A6%AC%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.ipynb)
+
+#### 목표
+
+* 자연어 처리 전문가가 아니라도 웹 데이터를 다루다 보면 정형화된 데이터에서 단순 텍스트 분석 등의 역할에 대한 니즈가 있기에 우선 이론적 배경에 대한 이해가 부족하더라도 실습해보기
