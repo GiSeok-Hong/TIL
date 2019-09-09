@@ -2,8 +2,9 @@ package chap01_알고리즘이란;
 
 import java.util.Scanner;
 
-public class Q2_세값의최소값 {
-
+public class Q2_세_값의_최소값 {
+	// 연습문제 Q2   19p
+	
 	static int min3(int a, int b, int c) {
 		int min = a;
 		
@@ -32,7 +33,7 @@ public class Q2_세값의최소값 {
 		min3(a, b, c);
 		System.out.println();
 		System.out.println("min3 : " + a + "," + b + "," + c + "," + 
-							" 중 가장 큰 값은 " + min3(a, b, c) + " 입니다.");
+							" 중 가장 작은 값은 " + min3(a, b, c) + " 입니다.");
 		
 		sc.close();
 	} // end main
