@@ -9,17 +9,19 @@ public class C2_세_값의_중앙값 {
 	static int med3(int a, int b, int c) {
 		if (a >= b)
 			if (b >= c)
-				return b;
+				return b;  // 1. a > b > c   2. a > b = c
+						   // 3. a = b > c   4. a = b = c
 			else if (a <= c)
-				return a;
+				return a;  // 1. a = c > b   2. c > a > b
+		                   // 3. c > a = b
 			else
-				return c;
+				return c;  // a > c > b
 		else if (a > c)
-			return a;
+			return a;      // b > a > c
 		else if (b > c)
-			return c;
+			return c;      // 1. b > a = c   2. b > c > a
 		else
-			return b;
+			return b;      // 1. b = c > a   2. c > b > a
 		
 	} // end med3
 	
