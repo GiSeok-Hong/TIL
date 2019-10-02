@@ -2,9 +2,10 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class C3_양수만_입력하기 {
+public class C3_DoWhile문 {
 
 	public static void main(String[] args) {
+		// 양수만 입력하기
 		// 실습 1-6   32p
 
 		Scanner sc = new Scanner(System.in);
