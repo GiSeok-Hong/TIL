@@ -24,7 +24,7 @@ public class Q5_반복문연습 {
 
 		System.out.println("b - a는 " + (b - a) + "입니다.");
 		
-		
+		sc.close();
 	} // end main
 
 } // end class
