@@ -22,7 +22,9 @@ public class C6_직각이등변삼각형 {
 			for (int j = 1; j <= i; j++)
 				System.out.print('*');
 			System.out.println();
-		}
+		} // end for
+		
+		sc.close();
 		
 	} // end main
 
