@@ -2,7 +2,7 @@ package chap01_알고리즘이란;
 
 import java.util.Scanner;
 
-public class C3_조건_판단과_분기 {
+public class C03_조건_판단과_분기 {
 	// 실습 1-3   22p
 
 	public static void main(String[] args) {

@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class C6_직각이등변삼각형 {
+public class C06_직각이등변삼각형 {
 
 	public static void main(String[] args) {
 		// 실습 1-8   38p

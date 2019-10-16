@@ -2,7 +2,7 @@ package chap01_알고리즘이란;
 
 import java.util.Scanner;
 
-public class Q2_세_값의_최소값 {
+public class Q02_세_값의_최소값 {
 	// 연습문제 Q2   19p
 	
 	static int min3(int a, int b, int c) {

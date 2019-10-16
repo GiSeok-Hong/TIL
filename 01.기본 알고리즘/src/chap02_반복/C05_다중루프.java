@@ -1,6 +1,6 @@
 package chap02_반복;
 
-public class C5_다중루프 {
+public class C05_다중루프 {
 
 	public static void main(String[] args) {
 		// 실습 1-7   36p

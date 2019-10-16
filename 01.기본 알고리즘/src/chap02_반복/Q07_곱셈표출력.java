@@ -1,6 +1,6 @@
 package chap02_반복;
 
-public class Q7_곱셈표출력 {
+public class Q07_곱셈표출력 {
 
 	public static void main(String[] args) {
 		// 연습문제 Q12   38p

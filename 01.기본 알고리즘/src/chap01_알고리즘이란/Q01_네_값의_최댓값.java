@@ -2,7 +2,7 @@ package chap01_알고리즘이란;
 
 import java.util.Scanner;
 
-public class Q1_네_값의_최댓값 {
+public class Q01_네_값의_최댓값 {
 	// 연습문제 Q1   19p
 	
 	static void max4(int a, int b, int c, int d) {

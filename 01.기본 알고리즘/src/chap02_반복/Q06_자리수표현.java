@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class Q6_자리수표현 {
+public class Q06_자리수표현 {
 
 	public static void main(String[] args) {
 		// 연습문제 Q11   33p

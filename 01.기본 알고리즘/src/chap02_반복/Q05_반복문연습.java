@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class Q5_반복문연습 {
+public class Q05_반복문연습 {
 
 	public static void main(String[] args) {
 		// 연습문제 Q10   33p

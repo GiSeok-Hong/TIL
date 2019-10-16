@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class C4_입력값_제한 {
+public class C04_입력값_제한 {
 
 	public static void main(String[] args) {
 		// 실습 1C-2   34p

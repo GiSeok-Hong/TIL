@@ -2,7 +2,7 @@ package chap01_알고리즘이란;
 
 import java.util.Scanner;	// import 선언.   java.util 패키지는 Scanner 클래스가 소속된 곳 
 
-public class C1_세_값의_최댓값 {
+public class C01_세_값의_최댓값 {
 
 	
 	// 3개의 입력값 중 최대값을 구하는 메서드

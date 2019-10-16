@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class Q9_정사각형만들기 {
+public class Q09_정사각형만들기 {
 
 	public static void main(String[] args) {
 		// 연습문제 Q14   38p

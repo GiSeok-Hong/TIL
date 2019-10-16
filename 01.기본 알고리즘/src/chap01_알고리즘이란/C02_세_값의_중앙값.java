@@ -3,7 +3,7 @@ package chap01_알고리즘이란;
 import java.util.Scanner;
 
 
-public class C2_세_값의_중앙값 {
+public class C02_세_값의_중앙값 {
 	// 실습 1C-1   21p
 
 	static int med3(int a, int b, int c) {

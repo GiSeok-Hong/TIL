@@ -1,6 +1,6 @@
 package chap01_알고리즘이란;
 
-public class Q3_세_값의_중앙값2 {
+public class Q03_세_값의_중앙값2 {
 	// 연습문제 Q4   22p
 	
 	static int med3(int a, int b, int c) {

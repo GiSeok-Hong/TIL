@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class Q3_가우스의덧셈 {
+public class Q03_가우스의덧셈 {
 
 	public static void main(String[] args) {
 		// 연습문제 Q8   30p

@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class Q4_ab사이의_모든정수의합 {
+public class Q04_ab사이의_모든정수의합 {
 
 	
 	static int sumof(int a, int b) {

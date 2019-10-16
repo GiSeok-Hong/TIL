@@ -2,7 +2,7 @@ package chap02_반복;
 
 import java.util.Scanner;
 
-public class Q2_for문연습1 {
+public class Q02_for문연습1 {
 
 	public static void main(String[] args) {
 		// 연습문제 Q7   30p
