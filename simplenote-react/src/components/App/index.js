@@ -4,6 +4,7 @@ import './index.css';
 import Header from '../Header';
 import List from '../List';
 import Note from '../Note';
+import { generateId } from '../../utils'; // 랜덤 id 생성 함수
 
 class App extends React.Component {
   // state : UI의 상태를 기록하는 데이터. 일반적으로 버튼의 활성화 상태, input의 입력 값,
@@ -40,18 +41,50 @@ class App extends React.Component {
     });
   }
 
+
+  handleAddNote = () => {
+    const id = generateId(); // 랜덤 ID 생성
+    this.setState({
+      notes: [
+        ...this.state.notes,
+        {
+          id,
+          title: '제목',
+          contents: '내용',
+        },
+      ],
+      activeId: id,
+    });
+  }
+
+
+  handleDeleteNote = () => {
+    // 현재 선택한 노트를 제외한 새로운 array를 생성
+    const notes = this.state.notes.filter((item) => item.id !== this.state.activeId);
+
+    // 새 array를 notes에 할당
+    this.setState({
+      notes,
+      activeId: notes.length === 0 ? null : notes[0].id, 
+    });
+  }
+
+
   render(){
     const { notes, activeId } = this.state;
     // 현재 활성화 된 객체를 찾아서 activeNote변수에 할당
     const activeNote = notes.filter((item) => item.id === activeId[0]);
     return (
       <div className="app">
-        <Header />
+        <Header 
+          onAddNote={this.handleAddNote}
+          onDeleteNote={this.handleDeleteNote}
+        />
         <div className="container">
           {/* note와 activeId props로 전달 */}
           <List
              notes={notes}
-             activeId={activeID}
+             activeId={activeId}
              onListItemClick={this.handleListItemClick} // 메소드 전달
           />
           {/* activeNote가 존재할 때 <Note /> 를 랜더링 */}
