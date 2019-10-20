@@ -23,6 +23,23 @@ class App extends React.Component {
     this.setState({ activeId: id });
   }
 
+  // 편집 이벤트 핸들러
+  handleEditNote = (type, e) => {
+    // 새 notes 어레이 생성
+    const notes = [ ... this.state.notes ];
+    
+    // notes에서 현재 activeId 와 일치하는 노트 객체 찾기
+    const note = notes.find((item) => item.id === this.state.activeId);
+
+    // 객체의 속성에 값 할당. note.title 또는 note.contents
+    note[type] = e.target.value;
+
+    // notes에 새 array 를 할당하여 state 변경
+    this.setState({
+      notes,
+    });
+  }
+
   render(){
     const { notes, activeId } = this.state;
     // 현재 활성화 된 객체를 찾아서 activeNote변수에 할당
@@ -40,7 +57,11 @@ class App extends React.Component {
           {/* activeNote가 존재할 때 <Note /> 를 랜더링 */}
           {/* note 속성에 activeNote 전달 */}
           {
-            notes.length !== 0 && <Note note={activeNote} />
+            notes.length !== 0 && 
+              <Note
+                note={activeNote} 
+                onEditNote={this.handleEditNote} // 메소드 전달
+              />
           }
         </div>
       </div>
