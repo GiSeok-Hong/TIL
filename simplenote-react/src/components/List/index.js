@@ -5,7 +5,11 @@ import ListItem from '../ListItem';
 
 class List extends React.Component {
   render() {
-    const { notes, activeId } = this.props;
+    const {
+      notes, 
+      activeId,
+      onListItemClick // App에서 전달 받은 이벤트 핸들러
+    } = this.props;
     return (
       <div className="list">
         {notes.map((item) => {
@@ -17,6 +21,7 @@ class List extends React.Component {
               active={id === activeId}
               title={title}
               contents={contents}
+              onClick={() => onListItemClick(id)} // 메소드 전달
             />
           );
         })}

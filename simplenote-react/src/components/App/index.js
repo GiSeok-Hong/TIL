@@ -16,6 +16,13 @@ class App extends React.Component {
     activeId: null,
   }
 
+  // 이벤트 핸들러 메소드
+  // this.setState()는 state를 설정하는 메소드
+  // state를 변경할 때는 반드시 this.setState() 사용
+  handleListItemClick = (id) => {
+    this.setState({ activeId: id });
+  }
+
   render(){
     const { notes, activeId } = this.state;
     return (
@@ -23,7 +30,11 @@ class App extends React.Component {
         <Header />
         <div className="container">
           {/* note와 activeId props로 전달 */}
-          <List notes={notes} activeId={activeID} />
+          <List
+             notes={notes}
+             activeId={activeID}
+             onListItemClick={this.handleListItemClick} // 메소드 전달
+          />
           <Note />
         </div>
       </div>
