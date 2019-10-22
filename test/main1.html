@@ -1,138 +1,153 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
-    </head>
-    <body>
-        <div id="subject"></div>
-        <div id="toc"></div>
-        <div id="control"></div>
-        <div id="content"></div>    
-        <script>
-function subject(){
-    document.querySelector('#subject').innerHTML = `
-    <header>
-        <h1>WEB</h1>
-        Hello, WEB!
-    </header>
-    `
-}
-function TOC(){
-    var state = store.getState();
-    var i = 0;
-    var liTags = '';
-    while(i<state.contents.length){
-        liTags = liTags + `
-        <li>
-            <a onclick="
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.4/redux.js"></script>
+  </head>
+  <body>
+    <div id="subject"></div>
+    <div id="toc"></div>
+    <div id="control"></div>
+    <div id="content"></div>
+
+    <script>
+      function subject(){
+        document.querySelector('#subject').innerHTML = `
+        <header>
+          <h1>WEB</h1>
+          Hello, WEB!
+        </header>
+        `
+      }
+
+      function TOC(){
+        let state = store.getState();
+        let i = 0;
+        let liTags = '';
+        while(i < state.contents.length){
+          liTags = liTags + `
+            <li>
+              <a onclick="
                 event.preventDefault();
                 var action = {type:'SELECT', id:${state.contents[i].id}}
                 store.dispatch(action);
-            " href="${state.contents[i].id}">
-                ${state.contents[i].title}
+                " 
+                href="${state.contents[i].id}">
+                  ${state.contents[i].title}
+              </a>
+            </li>`;
+          i = i + 1;
+        }
+        document.querySelector('#toc').innerHTML = `
+        <nav>
+          <ol>${liTags}</ol>
+        </nav>
+        `;
+      }
+
+      function control() {
+        document.querySelector('#control').innerHTML = `
+        <ul>
+          <li>
+            <a onclick="
+              event.preventDefault();
+              "
+              href="/create">create
             </a>
-        </li>`;
-        i = i + 1;
-    }
-    document.querySelector('#toc').innerHTML = `
-    <nav>
-        <ol>${liTags}</ ol>
-    </nav>
-    `;
-}
-function control(){
-    document.querySelector('#control').innerHTML = `
-    <ul>
-        <li><a onclick="
-            event.preventDefault();
-            
-        " href="/create">create</a></li>
-        <li><input type="button" value="delete"></li>
-    </ul>
-    `;
-}
-function article(){
-    var state = store.getState();
-    if(state.mode === 'create'){
-        document.querySelector('#content').innerHTML = `
-        <article>
+          </li>
+            <li><input type="button" value="delete"></li>
+        </ul>
+        `;
+      }
+
+      function article(){
+        var state = store.getState();
+        if(state.mode === 'create'){
+          document.querySelector('#content').innerHTML = `
+          <article>
             <form onsubmit="
-                event.preventDefault();
-                var _title = this.title.value;
-                var _desc = this.desc.value;
-                store.dispatch({
-                    type:'CREATE',
-                    title:_title,
-                    desc:_desc
-                })
+              event.preventDefault();
+              let _title = this.title.value;
+              let _desc = this.desc.value;
+              store.dispatch({
+                type:'CREATE',
+                title:_title,
+                desc:_desc
+              })
             ">
-                <p>
-                    <input type="text" name="title" placeholder="title">
-                </p>
-                <p>
-                    <textarea name="desc" placeholder="description"></textarea>
-                </p>
-                <p>
-                    <input type="submit">
-                </p>
+              <p>
+                <input type="text" name="title" placeholder="title">
+              </p>
+              <p>
+                <textarea name="desc" placeholder="description"></textarea>
+              </p>
+              <p>
+                <input type="submit">
+              </p>
             </form>
-        </article>
-        `
-    } else if(state.mode === 'read'){
-        var i = 0;
-        var aTitle, aDesc;
-        while(i < state.contents.length){
-            if(state.contents[i].id === state.selcted_id) {
-                aTitle = state.contents[i].title;
-                aDesc = state.contents[i].desc;
-                break;
+          </article>
+          `
+        } else if(state.mode === 'read'){
+          let i = 0;
+          let aTitle, aDesc;
+          while(i < state.contents.length){
+            if(state.contents[i].id === state.selected_id){
+              aTitle = state.contents[i].title;
+              aDesc = state.contents[i].desc;
+              break;
             }
             i = i + 1;
-        }
-        document.querySelector('#content').innerHTML = `
-        <article>
+          } // end while
+        
+          document.querySelector('#content').innerHTML = `
+          <article>
             <h2>${aTitle}</h2>
             ${aDesc}
-        </article>
-        `
-    }
-}
-function reducer(state, action){
-    if(state === undefined){
-        return {
+          </article>
+          `;
+        }
+      }
+
+      function reducer(state, action){
+        //console.log(state,action);  // 값이 바뀌는지 보기 위해 넣은 코드
+        if(state === undefined){ // 초기값 설정
+          return {
             max_id:2,
             mode:'create',
-            selcted_id:2,
+            selected_id: 2,
             contents:[
-                {id:1,title:'HTML',desc:'HTML is ..'},
-                {id:2,title:'CSS', desc:'CSS is ..'}
+              {id:1, title:'HTML', desc:'HTML is...'},
+              {id:2, title:'CSS', desc:'CSS is...'}
             ]
-        }
-    }
-    var newState;
-    if(action.type === 'SELECT'){
-        newState = Object.assign({}, state, {selcted_id:action.id});
-    } else if(action.type === 'CREATE'){
-        var newMaxId = state.max_id + 1;
-        var newContents = state.contents.concat();
-        newContents.push({id:newMaxId, title:action.title, desc:action.desc});
-        newState = Object.assign({}, state, {
+          }
+        } // end if
+        let newState;
+        if(action.type === 'SELECT'){
+          newState = Object.assign({}, state, {selected_id:action.id});
+        } else if(action.type === 'CREATE'){
+          let newMaxId = state.max_id + 1;
+          let newContents = state.contents.concat();  // concat() 배열을 복제하는 명령어
+          newContents.push({id:newMaxId, title:action.title, desc:action.desc});
+          newState = Object.assign({}, state, {
             max_id:newMaxId,
             contents:newContents,
             mode:'read'
-        })
-    }
-    console.log(action, state, newState);
-    return newState;
-}
-var store = Redux.createStore(reducer);
-store.subscribe(article);
-store.subscribe(TOC);
-subject();
-TOC();
-control();
-article();
-        </script>
-        
-    </body>
+          })
+        }
+        console.log(action, state, newState);
+        return newState;
+      }
+
+      const store = Redux.createStore(reducer);
+      store.subscribe(article);
+      store.subscribe(TOC);
+      subject();
+      TOC();
+      control();
+      article();
+    </script>
+
+
+
+  </body>
+
 </html>
