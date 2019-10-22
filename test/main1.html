@@ -26,7 +26,13 @@
         while(i<state.contents.length){
           liTags = liTags + `
             <li>
-              <a href="${state.contents[i].id}">${state.contents[i].title}
+              <a onclick=
+                "
+                event.preventDefault();
+                let action = {type:'SELECT', id:${state.contents[i].id}}
+                store.dispatch(action);
+                " 
+              href="${state.contents[i].id}">${state.contents[i].title}
             </li>
           `;
           i = i + 1;
@@ -57,15 +63,22 @@
       }
 
       function reducer(state, action){
+        console.log(state,action);  // 값이 바뀌는지 보기 위해 넣은 코드
         if(state === undefined){ // 초기값 설정
           return {
+            selected_id: null,
             contents:[
               {id:1, title:'HTML', desc:'HTML is...'},
               {id:2, title:'CSS', desc:'CSS is...'}
             ]
           }
+        } // end if
+        let newState;
+        if(action.type === 'SELECT'){
+          newState = Object.assign({}, state, {selected_id:action.id});
         }
-        return
+        console.log(action, state, newState);
+        return newState;
       }
 
       const store = Redux.createStore(reducer);
