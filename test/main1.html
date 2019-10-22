@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <header>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.4/redux.js"></script>
+  </header>
   <body>
     <div id="subject"></div>
     <div id="toc"></div>
@@ -17,12 +20,20 @@
       }
 
       function TOC(){
+        let state = store.getState();
+        let i = 0;
+        let liTags = '';
+        while(i<state.contents.length){
+          liTags = liTags + `
+            <li>
+              <a href="${state.contents[i].id}">${state.contents[i].title}
+            </li>
+          `;
+          i = i + 1;
+        }
         document.querySelector('#toc').innerHTML = `
         <nav>
-          <ol>
-            <li><a href="1.html">HTML</a></li>
-            <li><a href="2.html">CSS</a></li>
-          </ol>
+          <ol>${liTags}</ol>
         </nav>
         `;
       }
@@ -44,6 +55,20 @@
         </article>
         `;
       }
+
+      function reducer(state, action){
+        if(state === undefined){ // 초기값 설정
+          return {
+            contents:[
+              {id:1, title:'HTML', desc:'HTML is...'},
+              {id:2, title:'CSS', desc:'CSS is...'}
+            ]
+          }
+        }
+        return
+      }
+
+      const store = Redux.createStore(reducer);
 
       subject();
       TOC();
