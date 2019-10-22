@@ -12,3 +12,22 @@ export const decrement = () => ({ type: DECREMENT });
 const initialState ={
   number: 0
 };
+
+
+// 리듀서 작성
+export default function Counter(state=initialState, action){
+  switch(action.type){
+    case INCREMENT:
+      return {
+        ...state,
+        number: state.number + 1,
+      };
+    case DECREMENT:
+      return {
+        ...state,
+        number: state.number - 1,
+      };  
+    default:
+      return state;
+  }
+}
