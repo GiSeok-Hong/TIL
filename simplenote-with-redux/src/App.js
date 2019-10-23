@@ -1,26 +1,25 @@
+// components/App/index.js  -> 실질적인 화면을 보여주는 페이지
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/index';
+import List from './components/List/index';
+import Note from './components/Note/index';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends React.Component {
+  render() {
+    return (
+    <div className="app">
+      <Header />
+      <div className="container">
+        <List />
+        <Note />
+      </div>
     </div>
-  );
-}
+    ); // end return
+  } // end render()
+} // end class App
+
+
+
 
 export default App;
