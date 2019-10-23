@@ -4,6 +4,7 @@ div.note {
   }
   
   div.note > input.title {
+    background-color: aqua;
     display: block;
     font-size: 24px;
     font-weight: 800;
@@ -17,6 +18,7 @@ div.note {
   }
   
   div.note > textarea.note-contents {
+    background-color: aquamarine;
     display: block;
     font-size: 16px;
     font-weight: 400;

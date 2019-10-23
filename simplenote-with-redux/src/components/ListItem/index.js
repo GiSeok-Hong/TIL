@@ -1,20 +1,18 @@
-// ListItem/index.js
+// components/ListItem/index.js
 import React from 'react';
 import './index.css';
 
 class ListItem extends React.Component {
   render() {
-    const { active, title, contents, onClick } = this.props;
     return (
       <div 
-        className={active ? "list-item active" : "list-item"}
-        onClick={onClick} // onClick 이벤트 발생 시 onClick() 호출  
+        className='hana'  
       >
-        <div className="title">{title ? title : '제목'}</div>
-        <div className="list-item-contents">{contents ? contents : '내용'}</div>
+        <div className="title">제목</div>
+        <div className="list-item-contents">내용</div>
       </div>
-    );
-  }
-}
+    ); // end return()
+  } // end render()
+} // end class ListItem
 
 export default ListItem;
