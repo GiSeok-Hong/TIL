@@ -1,4 +1,4 @@
-// components/App/index.js  -> 실질적인 화면을 보여주는 페이지
+// src/App.js  -> 실질적인 화면을 보여주는 페이지
 import React from 'react';
 import './App.css';
 import Header from './components/Header/index';
