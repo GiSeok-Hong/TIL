@@ -9,7 +9,7 @@
 * [HTML](https://github.com/GiSeok-Hong/TIL/blob/master/HTML/README.md)
 * [Java](https://github.com/GiSeok-Hong/TIL/blob/master/Java/README.md)
 * [Python](https://github.com/GiSeok-Hong/TIL/blob/master/Python/README.md)
-* [React](https://github.com/GiSeok-Hong/TIL/blob/master/React/README.md)
+* [React](https://github.com/GiSeok-Hong/TIL/blob/master/React/README.md) 2019.10.14~
 ***
 ## 더 나은 개발자가 되는 8가지 방법
 
