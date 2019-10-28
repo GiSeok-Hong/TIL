@@ -4,12 +4,12 @@
 - 내가 공부하고 기록하고 싶은 모든 내용을 담는다.
 - 머리보다 손이 먼저 가도록
 ***
-[Django](https://github.com/GiSeok-Hong/TIL/blob/master/Django/README.md)
-[Flask](https://github.com/GiSeok-Hong/TIL/blob/master/Flask/README.md)
-[HTML](https://github.com/GiSeok-Hong/TIL/blob/master/HTML/README.md)
-[Java](https://github.com/GiSeok-Hong/TIL/blob/master/Java/README.md)
-[Python](https://github.com/GiSeok-Hong/TIL/blob/master/Python/README.md)
-[React](https://github.com/GiSeok-Hong/TIL/blob/master/React/README.md)
+* [Django](https://github.com/GiSeok-Hong/TIL/blob/master/Django/README.md)
+* [Flask](https://github.com/GiSeok-Hong/TIL/blob/master/Flask/README.md)
+* [HTML](https://github.com/GiSeok-Hong/TIL/blob/master/HTML/README.md)
+* [Java](https://github.com/GiSeok-Hong/TIL/blob/master/Java/README.md)
+* [Python](https://github.com/GiSeok-Hong/TIL/blob/master/Python/README.md)
+* [React](https://github.com/GiSeok-Hong/TIL/blob/master/React/README.md)
 ***
 ## 더 나은 개발자가 되는 8가지 방법
 
