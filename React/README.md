@@ -1,7 +1,7 @@
 # React
-React 공부
+### 1. Practice
+* 유튜브 및 다른 블로그 보며 연습한 내용
 
----
 
 #### REFERENCE
 
