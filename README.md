@@ -1,33 +1,77 @@
+# Today I Learned(TIL)
 
-# Today I Learned
-
+- 꾸준히 공부한 내용을 기록
+- 내가 공부하고 기록하고 싶은 모든 내용을 담는다.
+- 머리보다 손이 먼저 가도록
 ***
-#### 마크다운 작성법 참고
-https://gist.github.com/ihoneymon/652be052a0727ad59601
+[Django](https://github.com/GiSeok-Hong/TIL/blob/master/Django/README.md)
+[Flask](https://github.com/GiSeok-Hong/TIL/blob/master/Flask/README.md)
+[HTML](https://github.com/GiSeok-Hong/TIL/blob/master/HTML/README.md)
+[Java](https://github.com/GiSeok-Hong/TIL/blob/master/Java/README.md)
+[Python](https://github.com/GiSeok-Hong/TIL/blob/master/Python/README.md)
+[React](https://github.com/GiSeok-Hong/TIL/blob/master/React/README.md)
 ***
-#### Github - Git bash 터미널 계정 변경 참고
-https://meaownworld.tistory.com/78
-***
-[Practice Telegram_Bot 2019년 5월 30일](https://github.com/GiSeok-Hong/TIL/blob/master/telegram_bot/190530.md)
-***
-### Django
-[Django-Intro 2019년 6월 3일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.03.md)
+## 더 나은 개발자가 되는 8가지 방법
 
-[Django-Intro2 2019년 6월 4일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.04.md)
+### 1. 배울 것이 많은 것을 상기하기 
 
-[Django-DB 2019년 6월 4일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.04%20-%20DB.md)
+- 무언가를 배우는 첫 걸음은 그것을 모른다는 것을 깨닫는 것이다.
 
-[Django-Boards 2019년 6월 5일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.05%20django-boards.md)
 
-[Django-CRUD Practice 2019년 6월 10일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.10%20-%20practice%20crud.md)
 
-[Django-Improve CRUD 2019년 6월 11일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.11%20-%20improve%20boards.md)
+### 2. 내가 맞다는 걸 증명하려 하지 말기 
 
-[Django-Images 2019년 6월 13일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.13%20-%20images.md)
+- 훌륭해지기 위해서는 반드시 경험에서 배워야 한다. 
+- 내가 하는 모든 일을 다시 돌아보고 스스로에게 질문해라. "어떻게 하면 이걸 더 잘할 수 있을까?"를 고민하자.
 
-[Django-Like 2019년 6월 20일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.20%20-like.md)
+- 진정한 프로그래머는 적극적으로 어디가 잘못 됐는지 찾는다. 내가 놓친 결함은 사용자가 찾는다.
 
-[Django-Follow 2019년 6월 21일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.21%20-follow.md)
 
-[Django- 2019년 6월 26일](https://github.com/GiSeok-Hong/TIL/blob/master/django/markdown/2019.06.26%20-%20Django%20App%20%20%EC%9B%B9%20%EB%B0%B0%ED%8F%AC.md)
 
+### 3. "동작하는 코드"는 끝이 아니라 시작
+
+- 내가 작성한 소프트웨어는 동작하지만 끝난 것이 아니다. 
+- **더 낫게 만들어라**. 이 과정의 일부는 무엇이 "더 나은"것인지를 스스로 정의하는 것이다.
+
+
+
+### 4. 세 번 다시 작성해라 
+
+- 우선, 스스로에게 혹은 고객에게 그 해결책이 가능한 것임을 증명하기 위한 소프트웨어를 작성해라. 
+- 두 번째, 동작하게 만들어라
+- 세 번째, 올바르게 만들어라
+
+
+
+### 5. 코드를 읽고 또 읽어라
+
+다른 사람의 코드를 읽으면 다른 사람들이 프로그래밍 문제를 어떻게 푸는 지 볼 수 있다. 문자 그대로 보는 것이 아니라 하나의 수업이나 도전 과제로 생각해라.
+
+- 나라면 어떻게 짰을까?
+- 무엇을 배웠나?
+- 이 코드를 개선할 수 있는 방법은?
+- 원작자의 스타일로 코드를 작성해보자 
+
+
+
+**중요!**: 단지 코드를 많이 읽는다고 훌륭한 프로그래머가 되지 않는다. 수 많은 개발자가가 답을 찾기 위해서 오픈 소스나 다른 소프트웨어를 보지만 대게 비슷한 문제를 해결하는 것처럼 보이는 코드를 복붙한다. 하지만 이것은 다른 사람의 지혜를 맹목적으로 받아들이기만 할 뿐이다.
+
+
+
+### 6. 코드를 숙제처럼 작성하지 말자
+
+### 
+
+### 7.  어떤 방법으로든 다른 개발자와 일대일로 일해보기 
+
+다른 사람의 말을 듣는 것은 도움이 된다. 짝프로그래밍, 해커톤 등 가리지 말고 해보자 
+
+
+
+### 8. 도구가 아니라 기법을 배워라 
+
+프록그래밍 언어, 도구, 방법론 등은 사라졌다 나온다. 그래서 가능한 많은 경험을 가능한 다양한 언어와 프레임워크에서 쌓는게 좋다. 
+
+- **프로그래밍의 근본에 집중해라. 기본기는 사라지지 않는다. 프로그래밍하는 것보다 아키텍쳐에 더 주의를 기울여라.** 만약 어떤 일을 할 때 오직 하나의 올바른 방법만 있다는 확신이 든다면 아마도 현실 검증이 필요한 때 일 것이다. dogma는 당신이 새로운 것을 배우고 변화를 받아들이는 데 족쇄가 될 수 있다.
+
+**_자기 향상의 핵심 교리는 멈춰야 할 때를 아는 것이다._**
