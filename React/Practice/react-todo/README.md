@@ -1,8 +1,9 @@
 # Create React App: React Router, Redux Saga, and More
 
-[Bruno Krebs님의 글](https://auth0.com/blog/beyond-create-react-app-react-router-redux-saga-and-more/)을 보고 실습하면서 작성한 글입니다.
+* [Bruno Krebs님의 글](https://auth0.com/blog/beyond-create-react-app-react-router-redux-saga-and-more/)을 보고 실습하면서 작성한 글입니다.
 
-
+- 처음 공부하고 있어서 부족하거나 잘못된 정보가 있을 수 있습니다. (2019.10.28 월)
+- 조금 더 자세히 알게 되거나 수정할 부분이 있으면 바로바로 수정하겠습니다.
 
 {:toc}
 
@@ -1011,3 +1012,16 @@ export default App;
 * 문제 없이 진행했다면 아래와 같이 완성이 된다
 
 ![image](https://user-images.githubusercontent.com/48499094/67721763-bbe5bd00-fa1a-11e9-834c-4714332211b5.png)
+
+### 참고
+
+- [코드 컨벤션 자동화](http://guswnsxodlf.github.io/auto-js-code-convention)
+- [githook](http://meonggae.blogspot.com/2017/03/git-git-hooks.html)
+- [Javascript Lint](http://blog.naver.com/PostView.nhn?blogId=hji7000&logNo=220658622248&parentCategoryNo=&categoryNo=43&viewDate=&isShowPopularPosts=false&from=postView)
+- [staged](https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
+
+* [proptype이란?](https://13akstjq.github.io/react/2019/06/02/react-proptypes.html)
+
+- [react-router란](https://www.zerocho.com/category/React/post/57a71751c90c5815005babc4)
+- [routing이란](http://blog.naver.com/PostView.nhn?blogId=ssdyka&logNo=221068508093&parentCategoryNo=&categoryNo=11&viewDate=&isShowPopularPosts=true&from=search)
+
