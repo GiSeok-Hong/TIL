@@ -2,7 +2,7 @@
 
 * [Bruno Krebs님의 글](https://auth0.com/blog/beyond-create-react-app-react-router-redux-saga-and-more/)을 보고 실습하면서 작성한 글입니다.
 
-- 처음 공부하고 있어서 부족하거나 잘못된 정보가 있을 수 있습니다. (2019.10.28 월)
+- 처음 공부하고 있어서 부족하거나 잘못된 정보가 있을 수 있습니다. **(2019.10.28 월)**
 - 조금 더 자세히 알게 되거나 수정할 부분이 있으면 바로바로 수정하겠습니다.
 
 {:toc}
@@ -1012,6 +1012,20 @@ export default App;
 * 문제 없이 진행했다면 아래와 같이 완성이 된다
 
 ![image](https://user-images.githubusercontent.com/48499094/67721763-bbe5bd00-fa1a-11e9-834c-4714332211b5.png)
+
+
+
+### 실습을 마치며
+
+react 로 웹을 만들어 보기 위해 아무 지식 없이 시작한 react 공부
+
+JavaScript 부터 시작해서 react, redux, saga 등등 알아야 할 것들이 많아 걱정되지만 
+
+나중에 나만의 웹을 만들었을 때를 상상하며 열심히 배워나갈 생각이다
+
+
+
+
 
 ### 참고
 
