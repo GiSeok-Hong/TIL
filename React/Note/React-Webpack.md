@@ -213,7 +213,7 @@ module.exports = {
 };
 ```
 
-> **HtmlWebPackPlugin **은 웹팩이 html 파일을 읽어서 html 파일을 빌드할 수 있게 해준다.
+> **HtmlWebPackPlugin**은 웹팩이 html 파일을 읽어서 html 파일을 빌드할 수 있게 해준다.
 >
 > **loader** 는 html 파일을 읽었을 때 **html-loader**를 실행하여 웹팩이 이해할 수 있게 하고 **options** 로는 **minimize**라는 코드 최적화 옵션을 사용하고 있다.
 
