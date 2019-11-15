@@ -1,0 +1,41 @@
+/* Cascading Style Sheet */
+/* 선택자(selector) */
+
+/* .은 클래스 선택자*/
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+div#header-center {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+/* #은 id 선택자 */
+/* 자식에게 적용 */
+div#header-search > h1{
+  width: 198px;
+  display: inline-block;
+}
+
+/* 자손에게 적용 (자손: 자식 포함)
+div#header-center h1{
+  width: 1080px;
+}
+*/
+
+/* div 태그는 앞에 생략 가능
+#header-search h2 {
+  display: none;
+}
+*/
+
+#header-search fieldset {
+  width: 474px;
+  display: inline-block;
+}
