@@ -1,7 +1,7 @@
 /* Cascading Style Sheet */
 /* 선택자(selector) */
-
-/* .은 클래스 선택자*/
+/* #은 id 선택자 */
+/* .은 클래스 선택자 */
 .blind {
   position: absolute;
   overflow: hidden;
@@ -16,26 +16,36 @@ div#header-center {
   width: 1080px;
 }
 
-/* #은 id 선택자 */
-/* 자식에게 적용 */
-div#header-search > h1{
+div#header-search h1{
   width: 198px;
+  height: 48px;
   display: inline-block;
+  /* background-image: url(./sp_search.svg); */
+  /* background-position: -4px -4px; */
+  /* overflow: hidden;  글자 안 보이기 */
+  /* text-indent: 101%;  들여쓰기 */
+  /* background-repeat: no-repeat; 여백이 남으면 이미지가 반복이 되는데 그걸 막기 위해 */
+  background: url(./sp_search.svg) -4px -4px no-repeat;
 }
 
-/* 자손에게 적용 (자손: 자식 포함)
-div#header-center h1{
-  width: 1080px;
+a {
+  text-decoration: none;   /* a 태그를 사용하면 끝에 - 이 보이는데 그걸 안 보이게 하려고 사용*/
 }
-*/
 
-/* div 태그는 앞에 생략 가능
-#header-search h2 {
+#header-search h1 span {
   display: none;
 }
-*/
+
 
 #header-search fieldset {
-  width: 474px;
+  /* margin-left: 20px; */
+  /* padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 0px; */
+  /* padding: 12px 0 12px 10px; */
+  width: 470px;
+  height: 45px;
   display: inline-block;
+  border: 2px solid #03cf5d;
 }
