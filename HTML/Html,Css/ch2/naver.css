@@ -5,3 +5,25 @@ div#header-center {
   margin: 0 auto;
   width: 1080px;
 }
+
+/* 자식에게 적용 */
+div#header-search > h1{
+  width: 198px;
+  display: inline-block;
+}
+
+/* 자손에게 적용 (자손: 자식 포함)
+div#header-center h1{
+  width: 1080px;
+}
+*/
+
+/* div 태그는 앞에 생략 가능*/
+#header-search h2 {
+  display: none;
+}
+
+#header-search fieldset {
+  width: 474px;
+  display: inline-block;
+}
