@@ -88,6 +88,17 @@ inline-block 는 px 지정 가능
 
 하나의 태그는 margin(주황색으로 표시되는 부분)-border(테두리)-padding-content 로 구성된다.
 
+```css
+#header-search fieldset {
+  width: 470px;
+  height: 45px;
+  display: inline-block;
+  border: 2px solid #03cf5d;
+  box-sizing: border-box;  /* content 뿐만 아니라 패딩, 보더까지 포함*/
+}
+
+```
+
 
 
 
