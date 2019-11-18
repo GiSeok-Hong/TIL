@@ -126,6 +126,16 @@ CSS 우선순위
 
 
 
+float
+
+overflow: visible  - 자식이 넘쳐서 나온다
+
+overflow: hidden - 자식이 부모보다 길면 그 긴 부분만큼 잘라버림
+
+overflow:auto  - 자식이 부모보다 길면 스크롤바를 생성
+
+
+
 
 
 ### 실습을 마치며
