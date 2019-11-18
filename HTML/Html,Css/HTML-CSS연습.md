@@ -101,6 +101,31 @@ inline-block 는 px 지정 가능
 
 
 
+* mdn 사이트
+  * 컨테이닝 블록의 모든 것 [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/All_about_the_containing_block)
+  * Block formatting context(블록 서식 문맥) [mdn -block formatting context](https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Block_formatting_context)
+  * Stacking context(쌓임 맥락) [mdn-쌓임 맥락](https://developer.mozilla.org/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)
+
+
+
+포지션 : 모든 태그들은 기본적으로 static 포지션을 사용한다. - 정적인 포지션
+
+* static
+* relative : 상대적인, 비교대상이 필요 (static의 위치 기준으로 움직인다.)
+* absolute : 절대적인, 화면을 기준으로 위치(containing block을 기준으로 움직인다.)
+* fixed : 고정되어 있어서 스크롤을 내려도 그 위치에 그대로 따라오는 것.
+
+
+
+CSS 우선순위
+
+* 기본적으로 뒤에 나오는 css가 우선순위가 높다
+
+* !important > inline style attribute > id > class =다른 attribute > tag element
+* 우선순위가 같다면 개수가 많은 css가 우선순위가 높다.
+
+
+
 
 
 ### 실습을 마치며

@@ -8,6 +8,13 @@
   /* 모든 태그들의 기본적으로 박스사이즈를 width를 계산할 때 border로 계산*/
 }
 
+
+/* 브라우저에서 기본적으로 주는 margin, padding 을 0으로 하기 위해*/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .blind {
   position: absolute;
   overflow: hidden;
@@ -17,7 +24,7 @@
   height: 1px;
 }
 
-div#header-center {
+.center-align {
   margin: 0 auto;
   width: 1080px;
 }
@@ -92,4 +99,60 @@ a {
   height: 21px;
   display: inline-block;
   margin: 14px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+/* 공통적인 부분들을 뽑아냄 */
+nav li span:first-child {
+  height: 16px;
+  display: inline-block;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+  background-repeat: no-repeat;
+  margin-left: 14px;
+}
+
+nav li:first-child span:first-child {
+  width: 25px;
+  background-position: 0 -285px;
+  margin-left: 0;
+}
+
+nav li:nth-child(2) span:first-child {
+  width: 27px;
+  background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+  width: 40px;
+  background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+  width: 40px;
+  background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+  width: 26px;
+  background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+  width: 25px;
+  background-position: -70px -285px;
+}
+
+nav li:nth-child(7) span:first-child {
+  margin-top: -1px;
+  width: 32px;
+  background-position: -125px -130px;
 }
