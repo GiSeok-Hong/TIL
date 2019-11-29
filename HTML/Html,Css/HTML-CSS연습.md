@@ -47,11 +47,11 @@ document.head.parentNode.removeChild(document.head);
 
 
 
-레이아웃 구조를 짤 때 가로먼저 나누고 세로로
+레이아웃 구조를 짤 때 가로먼저 나누고 세로로 나눠야한다?
 
 div - 구역들을 나누는 태그  너비 100퍼센트
 
-**시맨틱태그**
+**시맨틱태그** : header, nav 와 같은 것들
 
 
 
