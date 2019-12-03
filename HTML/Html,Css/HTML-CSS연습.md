@@ -96,7 +96,7 @@ inline-block 는 px 지정 가능
 }
 
 ```
-정리필요
+
 
 * mdn 사이트
   * 컨테이닝 블록의 모든 것 [mdn](https://developer.mozilla.org/ko/docs/Web/CSS/All_about_the_containing_block)
