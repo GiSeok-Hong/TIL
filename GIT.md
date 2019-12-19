@@ -1,6 +1,89 @@
 # GIT
 
-* 추후 정리
+* 새로운 저장소 만들기
+
+  ```bash
+  $ git init
+  ```
+
+* 저장소 받아오기
+
+  ```bash
+  # 로컬 저장소 복제
+  $ git clone /로컬/저장소/경로
+  
+  # 원격 저장소 복제
+  $ git clone 사용자명@호스트:/원격/저장소/경로
+  ```
+
+* 변경된 파일 **인덱스**에 추가하기
+
+  ```bash
+  # 원하는 파일
+  $ git add <파일 이름>
+  
+  # 변경된 모든 파일
+  $ git add .
+  # 또는
+  $ git add *
+  ```
+
+* 변경 내용 **확정**하기 (HEAD에 반영된다.)
+
+  ```bash
+  $ git commit -m "변경에 대한 내용"
+  ```
+
+* 변경 내용 **발행**하기 (원격 서버에 올리기)
+
+  ```bash
+  # origin은 원격 서버  master는 로컬 서버
+  $ git push origin master
+  ```
+
+* branch **생성** 및 **이동**하기
+
+  ```bash
+  $ git branch <branch 명>
+  ```
+
+  ```bash
+  $ git checkout <branch 명>
+  ```
+
+  ```bash
+  # branch 생성 및 이동 한 번에 하기
+  $ git checkout -b <branch 명>
+  ```
+
+* branch **삭제**하기
+
+  ```bash
+  $ git branch -d <branch 명>
+  ```
+
+* local의 branch를 원격 저장소에 보내기
+
+  ```bash
+  $ git push origin <branch 명>
+  ```
+
+* 원격 저장소의 branch 가져오기
+
+  ```bash
+  $ git remote update
+  ```
+
+  ```bash
+  # local에 동일한 이름의 branch가 생성되면서 checkout 된다.
+  $ git checkout -t <원격 저장소 브런치 이름>
+  ```
+
+  
+
+
+
+
 
 
 #### Git 커밋 메시지 구성
