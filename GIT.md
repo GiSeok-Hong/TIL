@@ -79,8 +79,13 @@
   $ git checkout -t <원격 저장소 브런치 이름>
   ```
 
-  
+* branch 리스트 보기
 
+  ```bash
+  $ git branch
+
+  $ git branch -r  
+  ```
 
 
 
