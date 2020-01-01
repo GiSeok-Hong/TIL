@@ -79,6 +79,12 @@
   $ git checkout -t <원격 저장소 브런치 이름>
   ```
 
+* 원겨 저장소의 branch 삭제하기
+
+  ```bash
+  $ git push origin :<브런치 이름>
+  ```
+  
 * branch 리스트 보기
 
   ```bash
