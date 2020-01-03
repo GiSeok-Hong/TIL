@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Form, Input, Button } from 'antd'
+import { useDispatch } from 'react-redux';
+import { loginAction } from '../reducers/user';
 
 // Custom hook
 export const useInput = (initValue = null) => {
@@ -13,12 +15,17 @@ export const useInput = (initValue = null) => {
 }
 
 const LoginForm = () => {
+	const dispatch = useDispatch();
+
 	const [id, onChangeId] = useInput('');
 	const [pass, onChangePass] = useInput('');
 
 	const onSubmitForm = useCallback((e) => {
 		e.preventDefault();
-		console.log(id, pass);
+		dispatch(loginAction({
+			id,
+			pass
+		}))
 	}, [id, pass]);
 
 	return (

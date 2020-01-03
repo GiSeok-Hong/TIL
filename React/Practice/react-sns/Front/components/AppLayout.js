@@ -4,16 +4,12 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import LoginForm from './LoginForm';
 import UserProfile from './UserProfile';
-
-const mock = {
-  nickname: '홍기석 AppLayout',
-  Post: [],
-  Followings: [],
-  Followers: [],
-  isLoggedIn: false
-};
+import { useSelector } from 'react-redux';
 
 const AppLayout = ({ children }) => {
+  // reducers/user.js 안에 있는 state를 가져왔다고 볼 수 있다...
+  const { isLoggedIn } = useSelector(state => state.user);
+
   return (
     <div>
       <Menu mode="horizontal">
@@ -26,7 +22,7 @@ const AppLayout = ({ children }) => {
       <Row gutter={8}>
         <Col xs={24} md={6}>
           {
-            mock.isLoggedIn
+            isLoggedIn
             ? <UserProfile />
             : <LoginForm />
           }
