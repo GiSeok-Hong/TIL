@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Form, Input, Button } from 'antd'
-import { useDispatch } from 'react-redux';
-import { loginAction } from '../reducers/user';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginRequestAction } from '../reducers/user';
 
 // Custom hook
 export const useInput = (initValue = null) => {
@@ -16,13 +16,14 @@ export const useInput = (initValue = null) => {
 
 const LoginForm = () => {
 	const dispatch = useDispatch();
+	const { isLoggingIn } = useSelector(state => state.user);
 
 	const [id, onChangeId] = useInput('');
 	const [pass, onChangePass] = useInput('');
 
 	const onSubmitForm = useCallback((e) => {
 		e.preventDefault();
-		dispatch(loginAction({
+		dispatch(loginRequestAction({
 			id,
 			pass
 		}))
@@ -42,7 +43,7 @@ const LoginForm = () => {
           <Input name="user-pass" type="password" required value={pass} onChange={onChangePass}/>
         </div>
 				<div style={{marginTop: '10px' }}>
-					<Button type="primary" htmlType="submit" loading={false}>LogIn</Button>
+					<Button type="primary" htmlType="submit" loading={isLoggingIn}>LogIn</Button>
 					<Link href="/signup"><a><Button>SignUp</Button></a></Link>
 				</div>
 			</Form>

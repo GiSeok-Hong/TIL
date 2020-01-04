@@ -7,6 +7,9 @@ import withRedux from 'next-redux-wrapper';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from '../reducers';
+import createSagaMiddleware from 'redux-saga';
+import rootSaga from '../sagas';
+
 
 const HongSns = ({ Component, store }) => {
   return (
@@ -24,16 +27,22 @@ const HongSns = ({ Component, store }) => {
 
 // 타입 선언
 HongSns.propTypes = {
-  Component: PropTypes.elementType,
-  store: PropTypes.object
-}
+  Component: PropTypes.elementType.isRequired,
+  store: PropTypes.object.isRequired,
+};
 
-export default withRedux((initialState, Options) => {
-  const middlewares = [];
-  const enhancer = compose(
+const configureStore = (initialState, Options) => {
+  const sagaMiddleware = createSagaMiddleware();
+  const middlewares = [sagaMiddleware];
+  const enhancer = process.env.NODE_ENV === 'production'
+  ? compose(applyMiddleware(...middlewares))
+  : compose(
     applyMiddleware(...middlewares),
     !Options.isServer && typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined' ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f,  
   );
   const store = createStore(reducers, initialState, enhancer);
+  sagaMiddleware.run(rootSaga);
   return store;
-})(HongSns);
+};
+
+export default withRedux(configureStore)(HongSns);

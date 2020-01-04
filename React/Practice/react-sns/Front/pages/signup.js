@@ -1,8 +1,16 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Form, Input, Checkbox, Button } from 'antd';
 import { useInput } from '../components/LoginForm';
+import { useDispatch, useSelector } from 'react-redux';
+import Router from 'next/router';
+import { signUpRequestAction } from '../reducers/user';
 
 const Signup = () => {
+  const dispatch = useDispatch();
+  const { isSigningUp, me } = useSelector(state => state.user);
+
+  const [id, onChangeId] = useInput('');
+  const [nick, onChangedNick] = useInput('');
 
   const [pass, setPass] = useState('');
   const [passChk, setPassChk] = useState('');
@@ -10,6 +18,13 @@ const Signup = () => {
 
   const [passError, setPassError] = useState(false);
   const [termError, setTermError] = useState(false);
+
+  useEffect(() => {
+    if (me) {
+      alert('Move to mainpage because logged in.');
+      Router.push('/');
+    }
+  }, [me && me.id]);
 
   const onSubmit = useCallback((e) => {
     e.preventDefault();
@@ -22,9 +37,11 @@ const Signup = () => {
       return setTermError(true);
     }
 
-    console.log({
-      id, nick, pass, passChk, term
-    })
+    return dispatch(signUpRequestAction({
+      id,
+      pass, 
+      nick,
+    }));
   }, [pass, passChk, term]);
 
   const onChangePass = useCallback((e) => {
@@ -40,9 +57,6 @@ const Signup = () => {
     setTermError(false);
     setTerm(e.target.checked);
   };
-
-  const [id, onChangeId] = useInput('');
-  const [nick, onChangedNick] = useInput('');
 
   return (
     <>
@@ -75,7 +89,7 @@ const Signup = () => {
           {termError && <div style={{ color: 'red' }}>You must agrre term</div>}
         </div>
         <div>
-          <Button type="primary" htmlType="submit">Register</Button>
+          <Button type="primary" htmlType="submit" loading={isSigningUp}>Register</Button>
         </div>
       </Form>
     </>
