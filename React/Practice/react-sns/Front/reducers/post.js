@@ -22,7 +22,7 @@ const dummyPost = {
   id: 2,
   User: {
     id: 1,
-    nickname: '박철현',
+    nickname: '박철현 reducers/post.js',
   },
   content: 'Dummy POST',
   Comments: [],
@@ -32,7 +32,7 @@ const dummyComment = {
   id: 1,
   User: {
     id: 1,
-    nickname: '노민우',
+    nickname: '노민우 reducers/post.js',
   },
   createdAt: new Date(),
   content: 'Dummy REPLY',

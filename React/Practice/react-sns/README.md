@@ -61,7 +61,7 @@
 
     ```bash
    $ npm install
-    ```
+   ```
 
 
 
@@ -82,15 +82,23 @@ $ npm run dev
 
 
 
+5. _app.js 생성
+
+>_app.js는 props로 component를 받는데 이 component 들이 pages 가 된다.
+>
+>그럼 pages 들은 공통된 부분인 <Head> </Head>, <AppLayout></AppLayout> 을 계속 갖게 된다.
+
+Row 에 gutter  : 각 Col의 padding-left + padding-right 값
 
 
 
+redux
+
+* action : state를 바꾸는 행동  ex) 로그인 액션
+* dispatch: action 실행 ex) 로그인 액션 dispatch
+* reducer :  action 결과로 state를 어떻게 바꿀지 정의한다. ex) 로그인 액션 dispatch 시 -> 실행
 
 
-
-
-
-### 실습을 마치며
 
 ### 참고
 

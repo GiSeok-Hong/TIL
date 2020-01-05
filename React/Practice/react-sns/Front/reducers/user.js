@@ -14,7 +14,7 @@ export const initialState = {
   isSignedUp: false, // 회원가입 성공
   isSigningUp: false, // 회원가입 시도중
   signUpErrorReason:'', // 회원가입 실패 사유
-  me: null, // 내 정보
+  me: mockUser, // 내 정보
   followingList: [], //팔로잉 리스트
   followerList: [], // 팔로워 리스트
   userInfo: null, // 다른사람의 정보
