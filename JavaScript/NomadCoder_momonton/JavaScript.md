@@ -49,11 +49,37 @@
 
 1-7
 
-> let - 변경 가능
+> let
 >
-> const - 상수
+> * 블록 범위(scope) 지역 변수를 선언. 추가로 동시에 값을 초기화
+> * 지역변수
+>
+> ```javascript
+> if (true) {
+>   let y = 5;
+> }
+> console.log(y); // ReferenceError: y is not defined
+> ```
+>
+> const 
+>
+> * 블록 범위 읽기 전용 상수를 선언
 >
 > var
+>
+> * 변수를 선언. 추가로 동시에 값을 초기화
+> * 전역변수
+>
+> ```javascript
+> if (true) {
+>   var x = 5;
+> }
+> console.log(x); // 5
+> ```
+>
+> 
+>
+> 
 
 ### 실습을 마치며
 
@@ -62,3 +88,4 @@
 * [Nomad Coder - 바닐라 JS로 크롬 앱 만들기](https://academy.nomadcoders.co/courses/435558/lectures/6689830)
 * [Nomad Coder님의 GIthub](https://github.com/serranoarevalo/momonton)
 * [가상현실과 현실사이님의 글](http://egloos.zum.com/kjlife/v/2332939)
+* [MDN - JavaScript 문법과 자료형](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals)
