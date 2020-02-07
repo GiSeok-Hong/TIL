@@ -12,6 +12,9 @@
 
 * Front-end에서 웹사이트를 만들고 싶을 때 그 웹사이트를 interactive 로 만들고 싶을 때 사용
 
+* JavaScript는 언어, ECMAScript (ES) 는 specification(설명문) 으로 생각하자.
+* Vanilla JS : 브라우저를 통해 우리에게 제공된 JS라고 생각하면 된다.
+
 
 
 ### 목표
