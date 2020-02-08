@@ -1,16 +1,18 @@
-const title = document.getElementById("title");
+const title = document.querySelector("#title");
 
-console.log(title)
+function handleResize(){
+  console.log("I have been resized ~!")
+}
 
-// 아래 코드를 작성하면 title 내용이 변경이 된다.
-title.innerHTML = "Change content"
-// 마찬가지로 title 색이 흰색에서 빨강으로 변함
-title.style.color = "red"
-// head의 title 부분이 test로 변경
-document.title = "test"
-console.dir(title)
+// window.addEventListener("resize", handleResize());  호출을 하지 않았는데 실행이 됨
+// window 크기가 바뀌면 handleResize 함수를 실행한다.
+window.addEventListener("resize", handleResize);
 
-//
-const title2 = document.querySelector("#title");
-title2.innerHTML = "Change querySelector";
-title2.style.color = "blue";
+function handleClick(){
+  title.style.color = "red"
+  console.log("change title color")
+}
+// title 에 클릭을 하면 handleClick을 실행한다.
+title.addEventListener("click", handleClick);
+
+console.dir(title);
