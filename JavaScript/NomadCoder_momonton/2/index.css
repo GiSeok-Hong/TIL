@@ -2,7 +2,24 @@ body {
   background-color: aquamarine;
 }
 
+h1 {
+  color: #34495e;
+
+}
+
+/* #title {
+  color: #34495e;
+
+} */
 
 .content{
   color: tomato;
+}
+
+.clicked {
+  color: blue;
+}
+
+.btn {
+  cursor: pointer;
 }
