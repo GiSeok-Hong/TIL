@@ -112,6 +112,18 @@
 
 > querySelector : 노드의 첫번째 자식을 반환
 
+2-5
+
+> ```javascript
+> if(condition) {
+> 	block
+> } else {
+>     block
+> }
+> ```
+>
+> 
+
 ### 실습
 
 

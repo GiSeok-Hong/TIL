@@ -16,3 +16,10 @@ function handleClick(){
 title.addEventListener("click", handleClick);
 
 console.dir(title);
+
+const age = prompt("How old are you");
+if(age > 18){
+  console.log("you can drink")
+} else{
+  console.log("you can't")
+}
