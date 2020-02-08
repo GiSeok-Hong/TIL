@@ -79,9 +79,21 @@
 
 1-10
 
->Array
+>Array : 배열
+>
+>```javascript
+>const hongArray = [];
+>```
 >
 >Object : 각 value에 이름을 줄 수 있다. 실제 객체를 생성
+>
+>```javascript
+>const hongObject = {
+>	name: "hong",
+>	age: "22"
+>}
+>```
+>
 >
 
 2-1
