@@ -108,6 +108,10 @@
 
 > DOM ( Document Object Module )
 
+2-3
+
+> querySelector : 노드의 첫번째 자식을 반환
+
 ### 실습
 
 
