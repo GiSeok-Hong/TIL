@@ -7,19 +7,36 @@ function handleResize(){
 // window.addEventListener("resize", handleResize());  호출을 하지 않았는데 실행이 됨
 // window 크기가 바뀌면 handleResize 함수를 실행한다.
 window.addEventListener("resize", handleResize);
-
-function handleClick(){
-  title.style.color = "red"
-  console.log("change title color")
-}
-// title 에 클릭을 하면 handleClick을 실행한다.
-title.addEventListener("click", handleClick);
-
 console.dir(title);
 
-const age = prompt("How old are you");
-if(age > 18){
-  console.log("you can drink")
-} else{
-  console.log("you can't")
+
+
+const BASE_COLOR = "blue";
+const CHANGE_COLOR = "red";
+
+function handleClick(){
+  const currentColor = title.style.color;
+  if(currentColor === BASE_COLOR){
+    title.style.color = CHANGE_COLOR;
+    console.log("change color")
+  } else {
+    title.style.color = BASE_COLOR;
+    console.log("change")
+  }
 }
+
+function init(){
+  title.style.color= BASE_COLOR;
+  title.addEventListener("click", handleClick);
+}
+init();
+
+function handleOffline(){
+  console.log("offline");
+}
+
+function handleOnline(){
+  console.log("online");
+}
+window.addEventListener("online", handleOnline);
+window.addEventListener("offline", handleOffline);
