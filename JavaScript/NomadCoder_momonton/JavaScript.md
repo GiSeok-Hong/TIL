@@ -104,7 +104,9 @@
 >
 > parameter
 
+2-2
 
+> DOM ( Document Object Module )
 
 ### 실습
 
