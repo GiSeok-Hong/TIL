@@ -143,7 +143,16 @@ setInterval(function, 1000)
 * setInterval
   * 두 개의 인자를 받는데 첫 번째 인자는 실행할 함수, 두 번째 인자는 실행할 시간 간격
 
+3-3
 
+```javascript
+// ex
+localStorage.setItem("hong", true)
+localStorage.getItem("hong")  // true
+```
+
+* localStorage
+  * 작은 정보를 유저 컴퓨터에 저장하는 방법
 
 
 
