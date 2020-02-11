@@ -134,7 +134,14 @@ const date = new Date()
 
 console 창에서 연습을 많이 해보자...
 
+3-2
 
+```javascript
+setInterval(function, 1000)
+```
+
+* setInterval
+  * 두 개의 인자를 받는데 첫 번째 인자는 실행할 함수, 두 번째 인자는 실행할 시간 간격
 
 
 
