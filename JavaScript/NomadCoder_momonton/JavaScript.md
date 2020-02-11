@@ -153,6 +153,22 @@ localStorage.getItem("hong")  // true
 
 * localStorage
   * 작은 정보를 유저 컴퓨터에 저장하는 방법
+  * localStorage에는 자바스크립트의 data를 저장할 수 없다. String 만 가능 (3-6에서 추가)
+
+3-6
+
+```javascript
+function saveToDos(){
+  localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
+```
+
+* JSON.stringfy
+  * 자바스크립트 object를 string 으로 바꿔준다.
+* JSON (JavsScript Object Notation)
+  * 데이터를 전달할 때, 자바스크립트가 데이터를 다룰 수 있도록 object로 바꿔주는 기능
+* array.forEach()
+  * array에 담겨있는 것들 각각에 한 번씩 함수를 실행시키는 것
 
 
 
