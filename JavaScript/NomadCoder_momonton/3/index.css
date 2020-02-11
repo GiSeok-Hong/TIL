@@ -12,10 +12,6 @@ h1 {
 
 } */
 
-.content{
-  color: tomato;
-}
-
 .clicked {
   color: blue;
 }
@@ -30,4 +26,8 @@ h1 {
 
 .showing {
   display: block;
+}
+
+button {
+  margin-left: 5px;
 }
