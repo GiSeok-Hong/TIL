@@ -170,6 +170,17 @@ function saveToDos(){
 * array.forEach()
   * array에 담겨있는 것들 각각에 한 번씩 함수를 실행시키는 것
 
+3-10
+
+```javascript
+function getWeather(lat, lon){
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
+}
+```
+
+* fetch
+  * api를 이용해 데이터를 얻기 위해 사용
+
 
 
 ### 참고
