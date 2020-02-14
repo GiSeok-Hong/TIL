@@ -8,6 +8,7 @@
 ### [Flask](https://github.com/GiSeok-Hong/TIL/blob/master/Flask/README.md)
 ### [HTML](https://github.com/GiSeok-Hong/TIL/blob/master/HTML/README.md)
 ### [Java](https://github.com/GiSeok-Hong/TIL/blob/master/Java/README.md)
+### [JavaScript](https://github.com/GiSeok-Hong/TIL/blob/master/JavaScript/README.md)
 ### [Python](https://github.com/GiSeok-Hong/TIL/blob/master/Python/README.md)
 ### [React](https://github.com/GiSeok-Hong/TIL/blob/master/React/README.md)
 ***
