@@ -118,13 +118,14 @@ SELECT * FROM td_lot;
 
 
 
-
-
+* 시간 계산
+TIME 또는 TIMESTAMP의 처리는 WITH TIME ZONE 또는 WITHOUT TIME ZONE간에 다릅니다. 값이 저장되는 방식에는 영향을 미치지 않습니다. 해석 방법에 영향을줍니다.
 
 
 #### 참고
 
-* [PostgreSQL DOC / datetime](https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT)
+* [PostgreSQL DOC / Date/Time Function and Operators](https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT)
+* [PostgreSQL DOC / Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html)
 
 * [알아두면 유용한 psql 명령어 정리](https://browndwarf.tistory.com/51)
 
