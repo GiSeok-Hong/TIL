@@ -13,8 +13,6 @@
 </p>
 ```
 
-
-
 #### 2. pre
 
 ```html
@@ -24,8 +22,6 @@ pre 태그는 작    성한   그대로
 </pre>
 ```
 
-
-
 #### 3. ruby
 
 ```html
@@ -33,9 +29,23 @@ pre 태그는 작    성한   그대로
 <ruby>漢子<rt>한자</rt></ruby>
 ```
 
+#### 4. table / th / tr / td / caption
 
-
-#### 4. table th tr td
+```html
+<table border="1">
+	<caption>caption 표 제목</caption>
+	<tr>
+		<th>th1</th>
+		<td>td1</td>
+		<td>td2</td>
+	</tr>
+	<tr>
+		<th>th2</th>
+		<td>td3</td>
+		<td>td4</td>
+	</tr>        
+</table>
+```
 
 #### 5. dl
 
@@ -47,27 +57,19 @@ pre 태그는 작    성한   그대로
 </dl>
 ```
 
-#### 6. caption
+#### 6. strong / b / em / i
 
 ```html
-      <table border="1">
-        <caption>caption 표 제목</caption>
-        <tr>
-          <th>th1</th>
-          <td>td1</td>
-          <td>td2</td>
-        </tr>
-        <tr>
-          <th>th2</th>
-          <td>td3</td>
-          <td>td4</td>
-        </tr>        
-      </table>
+<strong>strong 태그는 중대하거나 긴급한 콘텐츠를 나타낸다.</strong>
+<br>
+<b>b 태그는 독자의 주의를 끌기 위한 용도로 사용</b>
+<br>
+<em>em 태그는 약간의 강조가 필요한 글. 텍스트의 강세를 나타냄</em>
+<br>
+<i>i태그는 텍스트에서 어떤 이유로 주위와 구분해야 하는 부분을 나타냄. 기술용어, 외국어 구절, 등장인물의 생각 등을 예시로 들 수 있다.</i>
 ```
 
-
-
-#### 7. figure
+#### 7. figure / figcaption
 
 ```html
       <figure>
@@ -91,11 +93,21 @@ pre 태그는 작    성한   그대로
 
 
 
-#### 8. figcaption
-
 #### 9. href
 
+* <a> 태그의 href 속성은 링크된 페이지의 URL을 명시
+
+```html
+<a href="https://www.naver.com">네이버 사이트로 이동!</a>
+```
+
+
+
 #### 10. anchor
+
+* 웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고 그 위치로 한번에 이동하는 링크를 만들 수 있는데, 이 기능을 앵커(anchor)라고 합니다
+
+
 
 #### 11. input
 
@@ -127,15 +139,48 @@ pre 태그는 작    성한   그대로
 
 #### 25. ul
 
+```html
+ <ul>
+    ul은 순차적이지 않은 목록 unordered list
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul>
+```
 #### 26. ol
 
+```html
+  <ol>
+    ol은 순차적인 목록 order list
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>        
+  </ol>
+```
 #### 27. src
 
 #### 28. div
 
 #### 29. hr
 
+```html
+<p>
+hr은 이야기 장면 전환, 구획 내 주제 변경 등, 문단 레벨 요소에서 주제의 분리를 나타냄
+사용시 가로선이 보임
+</p>
+<hr>
+```
+
 #### 30. br
+
+```html
+<p>
+	줄 바꿈 <br>
+	
+</p>
+```
+
+
 
 
 
