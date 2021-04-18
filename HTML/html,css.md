@@ -133,9 +133,29 @@ pre 태그는 작    성한   그대로
 
 #### 22. password
 
+```html
+password : <input type="password" name="password" maxlength="12">
+```
+
+
+
 #### 23. submit
 
+```html
+<input type="submit" value="Submit">
+```
+
+
+
 #### 24. file
+
+파일 불러오기 버튼 생성
+
+```html
+<input type="file">
+```
+
+
 
 #### 25. ul
 
