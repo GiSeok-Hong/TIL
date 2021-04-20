@@ -288,3 +288,62 @@ rel (relation) 링크된 문서와의 관계를 의미
 > 접근성과 사용성에도 적극적이어야 한다.
 >
 > 마우스가 없어도 키보드 만으로도 사용되어져야 한다.
+
+
+
+* Position
+
+1. relative
+2. absolute
+3. fixed
+
+> [MDN Position 문서](https://developer.mozilla.org/ko/docs/Web/CSS/position)
+
+* display:none VS opacity:0
+
+-> 둘다 화면에서 보이지 않게 하지만 display:none은 해당 컨텐츠가 차지하고 있던 공간까지 사라지고 opacity:0 은 보이지 않지만 공간은 그대로 유지된다.
+
+* overflow:hidden - 넘치는 부분은 나오지 않음
+
+연습
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>21번 홍기석</title>
+    <style>
+      #imgbox {width:500px; height:400px; background-color:yellow; border-radius:20px; overflow:hidden; position:relative;}
+      
+      #imgbox > img {width:100%; height:100%; position:absolute; top:0; left:0;}
+      #imgbox > img:not(:first-child) {display:none;}
+      
+      input[value="축구"]:checked ~ #imgbox img[alt="축구"] {display:block;}
+      input[value="농구"]:checked ~ #imgbox img[alt="농구"] {display:block;}
+      input[value="야구"]:checked ~ #imgbox img[alt="야구"] {display:block;}
+      input[value="배구"]:checked ~ #imgbox img[alt="배구"] {display:block;}
+      
+      
+    </style>
+  </head>
+  <body>
+    
+	<input type="radio" name="sports" value="축구" checked><span>축구</span>
+    <input type="radio" name="sports" value="농구"><span>농구</span>
+    <input type="radio" name="sports" value="야구"><span>야구</span>
+    <input type="radio" name="sports" value="배구"><span>배구</span>
+
+	<div id="imgbox">
+      <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29jY2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="축구">
+      <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFza2V0YmFsbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="농구">
+      <img src="https://images.unsplash.com/photo-1578432014316-48b448d79d57?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFzZWJhbGx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="야구">
+      <img src="https://images.unsplash.com/photo-1593787406536-3676a152d9cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dm9sbGV5YmFsbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="배구">
+    </div>
+
+  </body>
+</html>
+
+```
+
+
+
