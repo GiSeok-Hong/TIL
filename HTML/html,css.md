@@ -345,5 +345,32 @@ rel (relation) 링크된 문서와의 관계를 의미
 
 ```
 
+* **실수 했던 점**
+
+`input[value="spring"]:checked ~ #imgbox img[alt="봄"] {display:block;}` 에서 
+
+`input [value="spring"]` 와 같이 <u>**띄어쓰기**</u>를 하게 되면 작동하지 않는다.
 
 
+
+margin은 음수값을 가진다 padding은 음수값을 가질 수 없다
+
+Block 요소 - 새로운 블록이 만들어지는 태그, 해당 태그가 적용된 부분의 앞뒤로 줄 바꿈이 된다.
+
+Inline - 요소줄 바꿈이 생기지 않는 태그, 자신만의 영역을 갖지 않는 태그
+
+opacity: 1에서 0으로 갈수록 사라짐
+
+background-size : 
+
+* contain : 해당 범위를 넘지 않는 선에서 최대 비율로 보여줌
+* cover: 해당 범위를 꽉 채운다 (안 보이는 부분이 나타날 수 있음)
+
+box-shadow / text-shadow : x축 y축 번짐 색깔 순     [MDN box-shadow](https://developer.mozilla.org/ko/docs/Web/CSS/box-shadow)
+
+* ex) .sbox1 {box-shadow:4px 4px 4px #eee;}
+* ex) .tbox1 {text-shadow:4px 4px 4px #000; 
+
+rgba(빨,초,파,불투명도)
+
+* ex) #p1 {background-color:rgba(255,0,0,0.3);}
