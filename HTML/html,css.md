@@ -374,3 +374,107 @@ box-shadow / text-shadow : x축 y축 번짐 색깔 순     [MDN box-shadow](http
 rgba(빨,초,파,불투명도)
 
 * ex) #p1 {background-color:rgba(255,0,0,0.3);}
+
+---
+
+
+
+1. **block의 tag 종류**
+
+```
+<div>, <h1>~<h6>, <table>, <form>, <p>, <pre>, <hr>, <ul>, <ol>, <address>, <article>, <aside>, <blockquote>, <canvas>, <dl>, <dd>, <header>
+```
+
+2. **inline 속성 tag 종류**
+
+```
+<span>, <a>, <img>, <b>, <input>, <button>, <sub>, <sup>, <br>, <i>, <abbr>, <strong>, <b>, <em>, <small>, <textarea>, <label>
+```
+
+3. **음수를 쓸 수 있는 것은? margin?    padding?**
+
+   -> `margin`
+
+4. **div에 투명도 40%를 사용하려면?**　
+
+   -> `div {opacity:0.4;}`
+
+5. **box의 크기를 border를 기준으로?**     -> `.box {box-sizing:border-box;}`
+
+​       **box의 크기를 콘텐츠 영역기준으로?**   -> `.box {box-sizing:content-box;}`
+
+6. **div box 그림자 값과? 글자 그림자 값을 주려면?** 
+
+박스 그림자 값 -> `div {box-shadow:4px 4px 4px red;}  * x축으로 4px y축으로 4px 번짐 4px 빨강`
+
+글자 그림자 값 -> `div {text-shadow:4px 4px 4px red;}`
+
+​    
+
+7. **h1의 background-color의 빨강색, 투명도 30%; 주려면 ?** 
+
+   -> `h1 {background-color:red; opacity:0.3;}`
+
+​       **rgba 값으로 표현?** 
+
+​       -> `h1 {background-color:rgba(255,0,0,0.3);}`
+
+
+
+8. **h1의 background gradient값을  red에서 green으로 주려면?**
+
+​       -> `h1 {background:linear-gradient(red, green);}`
+
+​       **가로로 값을 주려면?**
+
+​	   -> `h1 {background:linear-gradient(to right, red, green);}`
+
+​    
+
+9. **box의 배경이미지 apple.png가 한 개만 나오고 정 중앙에 위치하려면?**
+
+   -> `.box {background-image:url(img/apple.png); background-repeat:no-repeat; background-position:center; /또는 background-position:50% 50%;} `
+
+​      **apple.png이미지가 왼쪽 끝에만 반복되려면?**
+
+​	   -> `.box {background-image:url(img/apple.png); background-repeat:repeat-y;}`
+
+​     **양쪽으로 apple.png와 tomato.png 이미지가 반복되려면?**
+
+​	  -> `.box {background-image:url(img/apple.png), url(img/apple.png); background-repeat:repeat-y; background-position:top left, top right;}`
+
+  
+
+10. **cursor의 모양이 손가락 모양이려면?** 
+
+    -> `{cursor:pointer;}`
+
+11. **box 배경이미지 조정**   
+
+​       **너비와 높이가 안쪽에 알맞은 방식으로 이미지가 다 들어오게 하는 값은?** 
+
+​	  -> `.box {background-size:contain;}`
+
+​      **배경이미지가 배경 안에 완전히 덮이도록 하는 값은?**
+
+​	  -> `.box {background-size:cover;}`
+
+​    
+
+12. **이미지에 마우스가 올라가면 크기가 커지도록 하는 값은?** -> `img:hover {transform:scale(1.5);}`
+
+​       **이미지에 마우스가 올라가면 투명도가 달라지는 값은?** -> `img:hover {opacity:0.5;}`
+
+​       **이미지에 마우스가 올라가면 사각형의 모양이 굴곡이 지는 값은?**-> `img:hover {border-radius:30%}`
+
+​    
+
+13. **box안에 들어가는 이미지 또는 text의 높이가 길어져도 보이지 않게 하는 값은?**
+
+    -> `.box {overflow:hidden;}`
+
+---
+
+[[nth-of-child 와 nth-child의 차이]](https://blog.naver.com/ysboo2/221533512193)
+
+[[가상클래스 / 가상요소]](https://blog.naver.com/ysboo2/221642367935)
