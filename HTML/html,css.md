@@ -477,4 +477,59 @@ rgba(빨,초,파,불투명도)
 
 [[nth-of-child 와 nth-child의 차이]](https://blog.naver.com/ysboo2/221533512193)
 
+* nth-child(n) 
+
+-> 부모 엘리먼트의 **모든 자식** 엘리먼트 중 **n번째**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <style>
+      .box > p:nth-child(5){ color:red;}
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>1. p태그1</p>
+      <span>2. span태그1</span>
+      <p>3. p태그2</p>
+      <span>4. span태그2</span>
+      <p>5. p태그3</p>             <!-- 빨간색 -->
+    </div>
+  </body>
+</html>
+```
+
+
+
+* nth-of-type(n)
+
+-> 부모 엘리먼트의 **특정(type) 자식** 엘리먼트 중 **n번째**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <style>
+      .box > p:nth-of-type(3){color:blue;}
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>1. p태그1</p>
+      <span>2. span태그1</span>
+      <p>3. p태그2</p>
+      <span>4. span태그2</span>
+      <p>5. p태그3</p>   <!-- 파랑색 -->
+    </div>
+  </body>
+</html>
+
+```
+
+
+
 [[가상클래스 / 가상요소]](https://blog.naver.com/ysboo2/221642367935)
