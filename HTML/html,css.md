@@ -291,13 +291,26 @@ rel (relation) 링크된 문서와의 관계를 의미
 
 
 
-* Position
+* **Position**
+  * 모든 태그들은 처음에 position:static 상태 (차례대로 왼쪽에서 오른쪽, 위에서 아래로 쌓임)
+  * 겹쳤을 경우 태그는 같은 position이면 나중에 나온 태그가 더 위에 배치된다.
 
 1. relative
+   - 태그의 위치를 변경하고 싶을 때 사용. static인 상태를 기준으로 top, right, bottom, left 속성을 사용해 **위치 조절이 가능** 
+   - relative는 각각의 방향을 기준으로 태그 안쪽 방향으로 이동. 바깥쪽으로 이동하고 싶으면 음수를 주면 된다.
 2. absolute
+   * **position:static 속성을 가지고 있지 않은 부모를 기준**으로 움직인다.
+   * 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 된다.
+   * absolute가 되면 div여도 더는 width:100%가 아니다.
 3. fixed
+   * 특정 위치에 고정
+   * fixed도 absolute처럼 더는 div가 width:100%가 아니다.
 
 > [MDN Position 문서](https://developer.mozilla.org/ko/docs/Web/CSS/position)
+>
+> [zerocho css 포지션](https://www.zerocho.com/category/CSS/post/5864f3b59f1dc000182d3ea1)
+
+
 
 * display:none VS opacity:0
 
@@ -532,14 +545,48 @@ rgba(빨,초,파,불투명도)
 
 
 
+
+
+#### 가상 선택자
+
+CSS에는 가상 요소와 가상 클래스가 있다. 이것들을 사용해서 html 문서의 수정 없이 CSS만으로 디자인적 요소를 추가할 수 있어 html 문서에 쓸데없는 태그를 사용하지 않게 한다.
+
+
+
 [[가상클래스 / 가상요소]](https://blog.naver.com/ysboo2/221642367935)
 
-* 가상 요소: 클래스 이름 앞에 콜론 두개 (::)를 붙여 표시
+* 가상 요소
 
-  * 글자에 스타일을 적용
+  * 선택자에 추가하는 키워드로 선택한 요소의 일부분에만 스타일을 입힌다.
 
-    대표적으로 사용하는 가상 요소`::before / ::after`
+  * 실제로 존재하지 않는 요소를 만들게 해줌.
 
-* 가상 클래스 : 클래스 이름 앞에 콜론 (:)을 붙여 표시
+  * `선택자::가상요소 {property:value;}`
 
-  * 요소의 이벤트에 대응하기 위하여 미리 만들어 놓은 클래스
+    | 종류           | 예시                         | 내용                                           |
+    | -------------- | ---------------------------- | ---------------------------------------------- |
+    | ::first-line   | p:first-line {color:#fff;}   | 문단의 첫 줄의 색을 흰색으로 변경              |
+    | ::first-letter | p:first-letter {color:#fff;} | 문단의 첫 글자의 색을 흰색으로 변경            |
+    | ::before       | p:before {content:"시작";}   | 문단 시작 부분에 "시작"이라는 요소 추가        |
+    | ::after        | p:after {content:"끝";}      | 문단 끝 부분에 "끝"이라는 요소 추가            |
+    | ::selection    | p:selection {color:#fff;}    | 드래그로 선택하였을 때 글씨 색을 흰색으로 변경 |
+
+    
+
+* 가상 클래스
+
+  * `선택자:가상클래스 {property:value;}`
+  
+  * 특정 상태에 스타일을 적용할 때 사용한다. 
+  
+  * 실제로 존재하는 요소에 클래스 추가 없이 디자인을 입히기 위한 것.
+  
+    | 종류           | 예시                           | 내용                                                     |
+    | -------------- | ------------------------------ | -------------------------------------------------------- |
+    | :first-child   | li:first-child {color:#fff}    | li 자식 요소 중 첫 번째 자식 요소의 색을 흰색으로 변경   |
+    | :last-child    | li:last-child {color:#fff}     | li 자식 요소 중 마지막 자식 요소의 색을 흰색으로 변경    |
+    | :nth-child()   | li:nth-child(2) {color:#fff;}  | li 자식 요소 중 2번째 자식 요소의 색을 흰색으로 변경     |
+    | :nth-of-type() | p:nth-of-type(2) {color:#fff;} | 자식 요소 중 p 태그 2번째 자식 요소의 색을 흰색으로 변경 |
+  
+    
+
