@@ -488,7 +488,7 @@ rgba(빨,초,파,불투명도)
 
 ---
 
-[[nth-of-child 와 nth-child의 차이]](https://blog.naver.com/ysboo2/221533512193)
+[[nth-of-type과 nth-child의 차이]](https://blog.naver.com/ysboo2/221533512193)
 
 * nth-child(n) 
 
