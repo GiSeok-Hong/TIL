@@ -620,3 +620,298 @@ clear:both
 
 **inherit** : 부모 요소의 속성값을 상속받습니다.
 
+
+
+
+
+ 
+
+* 연습1 이순신 예제 (jquery 연습)
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <meta charset="utf-8">
+    <style>
+      * {margin:0; box-sizing:border-box;}
+      #wrap {width:500px; height:650px; border:1px solid #666; margin:20px; text-align:center;}
+
+      #box1 {width:100%; height:500px; background-color:gold; }
+      #box2 {width:100%; height:500px; background-color:green; display:none;}
+      #box3 {width:100%; height:500px; background-color:tomato; display:none;}
+      #box4 {width:100%; height:500px; background-color:blue; display:none;}
+      img {width:300px; height:250px; margin-top:10px;}
+      .textbox {background-color:#fff; width:100%; height:200px; padding:20px; text-align:left;}
+      button {width:60px; height:40px; margin:10px; cursor:pointer;}
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $("button:nth-of-type(1)").click(function(){
+          $("#box1").fadeIn();
+          $("#box2").hide();
+          $("#box3").hide();
+          $("#box4").hide();
+        });
+        $("button:nth-of-type(2)").click(function(){
+          $("#box2").fadeIn();
+          $("#box1").hide();
+          $("#box3").hide();
+          $("#box4").hide();
+        });
+        $("button:nth-of-type(3)").click(function(){
+          $("#box3").fadeIn();
+          $("#box1").hide();
+          $("#box2").hide();
+          $("#box4").hide();
+        });
+        $("button:nth-of-type(4)").click(function(){
+          $("#box4").fadeIn();
+          $("#box1").hide();
+          $("#box2").hide();
+          $("#box3").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <div id="wrap">
+
+      <h1>한국의 계절</h1>
+      <div id="box1">
+        <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3ByaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="봄">
+        <div class="textbox">
+          <h2>봄</h2>
+          <p>기상학에서는 기온 변화에 따라 계절을 구분한다. 일 평균 기온이 5도 이상으로 올라가 9일간 유지될 때, 그 첫 번째 날을 봄의 시작일로 정의한다.</p>
+        </div>
+      </div>
+
+      <div id="box2">
+        <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHN1bW1lcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="여름">
+        <div class="textbox">
+          <h2>여름</h2>
+          <p>기상학에서는 기온 변화에 따라 계절을 구분한다. 대한민국 기상청은 여름의 시작을 일평균 기온이 20도 이상으로 올라간 뒤 다시 떨어지지 않는 첫날로 정의하며, 나흘 전부터 나흘 후까지 9일 동안의 평균 기온이 이틀 연속 유지될 때를 기준으로 한다.</p>
+        </div>
+      </div>
+
+      <div id="box3">
+        <img src="https://images.unsplash.com/photo-1507371341162-763b5e419408?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmFsbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="가을">
+        <div class="textbox">
+          <h2>가을</h2>
+          <p>기상학에서는 기온 변화에 따라 계절을 구분한다. 일 평균 기온이 20도 이하로 내려가 9일간 유지될 때, 그 첫 번째 날을 가을의 시작일로 정의한다.</p>
+        </div>
+      </div>
+
+      <div id="box4">
+        <img src="https://images.unsplash.com/photo-1455156218388-5e61b526818b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8d2ludGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="겨울">
+        <div class="textbox">
+          <h2>겨울</h2>
+          <p>기상학에서는 기온 변화에 따라 계절을 구분한다. 일 평균 기온이 5도 이하로 내려가 9일간 유지될 때, 그 첫 번째 날을 겨울의 시작일로 정의한다.</p>
+        </div>
+      </div>
+
+
+      <button>봄</button>
+      <button>여름</button>
+      <button>가을</button>
+      <button>겨울</button>
+
+    </div>
+
+  </body>
+</html>
+
+```
+
+* 연습2  동영상 넣기
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Video 연습</title>
+
+    <style>
+      * {margin:0; box-sizing: border-box;}
+      video {position: absolute; top:0; left:0; min-width: 100%; min-height:100%;}
+      .textbox {position: absolute; top:50%; left:50%; width:500px; height:400px; border:20px solid gold; padding:30px; margin:-200px 0 0 -250px;}
+      h1 {font-size: 45px; color: #fff;}
+      p {font-size: 25px; color: #fff;}
+      button {width:30%; height:40px; background-color: gold; cursor: pointer; float: right; border:none; border-radius: 10px; margin:30px 0 0 0;}
+      button:hover {opacity: 0.7;}
+    </style>  
+
+  </head>
+  <body>
+    <video src="video/01.mp4" loop muted autoplay></video>  
+
+    <div class="textbox"> 
+      <h1>NATIONAL<br>GEOGRAPHIC</h1>
+      <p>Amazon Jungle Documentary<br>
+        National Geographic</p>
+      <button type="button">click</button>
+    </div>
+
+
+
+
+  </body>
+</html>
+```
+
+* 연습3 미디어쿼리 연습
+
+  @media all and(min-width:320px){실행문}
+
+  @media all and(min-width:768px){실행문}
+
+  @media all and(min-width:1024px){실행문}
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+      * {margin:0; box-sizing:border-box;}
+
+      @media (max-width:399px){
+        header {width:100%; height:200px; margin:0 auto; background-color:gold;}
+      }
+
+      @media (min-width:400px){
+        header {width:100%; height:200px; margin:0 auto; background-color:tomato;}
+      }
+
+      @media (min-width:500px){
+        header {width:500px; height:200px; margin:0 auto; background-color:green;}
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <header></header>
+
+  </body>
+</html>
+
+```
+
+* 연습4 flexbox 연습
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <style>
+      #container1 {width:450px; height:250px; background-color:gold; margin:0 auto 30px; display:flex; flex-direction:row}
+
+      #container2 {width:450px; height:250px; background-color:silver; margin:0 auto 70px; display:flex; flex-wrap:wrap;}
+
+      #container3 {width:450px; height:250px; background-color:skyblue; margin:0 auto 50px; display:flex; flex-flow:column wrap}
+
+      #container4 {width:1000px; height:250px; background-color:yellowgreen; margin:0 auto 50px; display:flex; justify-content:space-between}
+
+      #container5 {width:450px; height:250px; background-color:yellowgreen; margin:0 auto 80px; display:flex; align-items:center;}
+
+      #container6 {width:450px; height:450px; background-color:yellowgreen; margin:0 auto 50px; display:flex; flex-wrap:wrap; align-content:space-around;}
+
+
+      .box1 {width:50px; height:10px; background-color:red; }
+      .box2 {width:70px; height:20px; background-color:orange; }
+      .box3 {width:90px; height:30px; background-color:yellow; }
+      .box4 {width:110px; height:40px; background-color:green; }
+      .box5 {width:130px; height:50px; background-color:blue; }
+      .box6 {width:150px; height:60px;background-color:indigo; }
+      .box7 {width:170px; height:70px; background-color:purple; }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="container1">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+    </div>
+
+    <div id="container2">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+    </div>
+
+    <div id="container3">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+    </div>
+
+    <div id="container4">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+    </div>
+
+    <div id="container5">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+    </div>
+
+
+    <div id="container6">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+    </div>
+
+
+  </body>
+</html>
+
+```
+
+
+
+
+
