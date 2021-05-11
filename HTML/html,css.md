@@ -915,3 +915,53 @@ clear:both
 
 
 
+**flexbox**란?
+
+flexbox는 뷰포트나 요소의 크기가 불명확하거나 동적으로 변할 때에도 효율적으로 요소를 배치, 정렬, 분산할 수 있는 방법을 제공하는 CSS3의 새로운 레이아웃 방식이다. flexbox의 장점을 한 마디로 표현하면 '복잡한 계산 없이 요소의 크기와 순서를 유연하게 배치할 수 있다'라고 할 수 있다. 정렬, 방향, 순서, 크기 등을 유연하게 조절할 수 있기 때문에 별도의 분기 처리를 줄일 수 있고, CSS만으로 다양한 레이아웃을 구현할 수 있다.
+
+![image](https://user-images.githubusercontent.com/48499094/117775541-92475c00-b275-11eb-80dc-9e06c4088fc6.png)
+
+display: flex 속성이 적용된 요소는 flex container가 되고, flex container의 자식 요소는 flex item이 된다. flex container와 flex item은 부모 요소와 자식 요소를 한 세트로 사용하는 ul과 li를 생각하면 쉽게 이해할 수 있다.
+
+![image](https://user-images.githubusercontent.com/48499094/117775619-a428ff00-b275-11eb-9253-3d83794aa0b6.png)
+
+**부모 요소와 자식 요소에 정의하는 속성 구분**
+
+flexbox에서 사용하는 속성은 부모 요소인 flex container에 정의하는 속성과 자식 요소인 flex item에 정의하는 속성으로 나누어진다. 
+
+|                 flex container 속성                 |                |
+| :-------------------------------------------------: | -------------- |
+|                flex-direction (방향)                | row            |
+|                                                     | row-reverse    |
+|                                                     | column         |
+|                                                     | column-reverse |
+|                                                     | initial        |
+|                                                     |                |
+|                 flex-wrap (줄바꿈)                  | nowrap         |
+|                                                     | wrap           |
+|                                                     | wrap-reverse   |
+|                                                     | initial        |
+|                                                     |                |
+| flex-flow <br>(flex-direction과 flex-wrap이 합쳐짐) | row wrap;      |
+|                                                     |                |
+|             justify-content (x축 이동)              | flex-start     |
+|                                                     | flex-end       |
+|                                                     | center         |
+|                                                     | space-between  |
+|                                                     | space-around   |
+|                                                     | space-evenly   |
+|                                                     |                |
+|               align-items (y축 이동)                | flex-start     |
+|                                                     | flex-end       |
+|                                                     | center         |
+|                                                     | stretch        |
+|                                                     | baseline       |
+|                                                     |                |
+|             align-content (여러줄 y축)              | flex-start     |
+|                                                     | flex-end       |
+|                                                     | center         |
+|                                                     | stretch        |
+|                                                     | space-between  |
+|                                                     | space-around   |
+|                                                     | space-evenly   |
+
