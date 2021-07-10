@@ -181,7 +181,7 @@
 
 
 
-**.mousedown()  /  .mouseup()**
+**.mousedown()  /  .mouseup()** - 마우스로 눌렀을 경우 / 마우스를 땔 경우
 
 ```html
 <!DOCTYPE html>
@@ -765,7 +765,7 @@
 
 
 
-**.append()**
+**.append()** - 뒤쪽에 추가
 
 ```html
 <!DOCTYPE html >
@@ -810,7 +810,7 @@
 
 
 
-**.prepend()**
+**.prepend()** - 앞쪽에 추가
 
 ```html
 <!DOCTYPE html >
@@ -893,7 +893,7 @@
 
 
 
-**.remove()**
+**.remove()** - 선택한 요소를 포함하여 하위 요소들 까지 제거
 
 ```html
 <!DOCTYPE html >
@@ -950,7 +950,7 @@
 
 
 
-**.empty()**
+**.empty()** - 선택한 요소의 하위요소들을 제거
 
 ```html
 <!DOCTYPE html >
