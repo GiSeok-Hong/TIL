@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+// React Component를 상속한 Square 클래스
 class Square extends React.Component {
   render() {
     return (
