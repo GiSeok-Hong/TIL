@@ -9,4 +9,14 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(3000);
 }
+
+/*
+
+function bootstrap() {
+  NestFactory.create(AppModule).then((app) => {
+    app.listen(3000);
+  });
+}
+
+*/
 bootstrap();
