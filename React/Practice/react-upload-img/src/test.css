@@ -1,0 +1,22 @@
+.test-box {
+  width:500px;
+  height:500px;
+  border:1px solid #333;
+  margin:0 auto;
+}
+
+h3 {
+  text-align: center;
+  border-bottom: 1px solid #333;
+  padding: 10px;
+}
+
+p {
+  margin:10px;
+}
+
+
+.imgtest {
+  width:200px;
+  height:200px;
+}
