@@ -5,18 +5,48 @@
   margin:0 auto;
 }
 
-h3 {
+h2 {
   text-align: center;
-  border-bottom: 1px solid #333;
   padding: 10px;
 }
 
 p {
   margin:10px;
+  text-align: center;
 }
 
+
+.imgPreview {
+  text-align: center;
+  margin:15px;
+}
 
 .imgtest {
   width:200px;
   height:200px;
+  
+}
+
+.btn-area {
+  text-align: center;
+  margin:10px 0;
+}
+
+.btn-area > input {
+  display: none;
+}
+
+.img-btn {
+  background-color: #0099ff;
+  color: #fff; 
+  width: 100px;
+  height: 40px; 
+  cursor: pointer; 
+  margin: 10px;
+  border: 1px solid #0099ff;
+}
+
+.img-btn:hover {
+  background-color: #fff;
+  color:#0099ff;
 }
