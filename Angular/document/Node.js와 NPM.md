@@ -1,0 +1,35 @@
+# Node.js와 NPM
+
+### Node
+
+Node.js는 크롬 v8 자바스크립트 엔진으로 빌드된 자바스크립트 런타임 환경으로 주로 서버 사이드 애플리케이션 개발에 사용되는 소프트웨어 플랫폼이다.
+
+Node.js는 브라우저 외부 환경에서 자바스크립트 애플리케이션 개발에 사용되며 이에 필요한 모듈, 파일 시스템, HTTP 등 빌트인 API를 제공한다.
+
+REPL(Read Eval Print Loop: 입력 수행 출력 반복)
+
+```jsx
+// app.js
+
+const http = require('http');
+
+http.createServer((request, response) => {
+	response.statusCode = 200;
+	response.setHeader('Content-Type', 'text/plain');
+	response.end('Hello World');
+}).listen(3000);
+
+console.log('Server running at <http://127.0.0.1:3000/>');
+```
+
+### NPM
+
+npm(node package manager)은 자바스크립트 패키지 매니저이다. Node.js에서 사용할 수 있는 모듈을 패키지화하여 모아둔 저장소 역할과 패키지 설치 및 관리를 위한 CLI를 제공한다.
+
+Node.js 프로젝트에서는 많은 패키지를 사용하게 되고 패키지의 버전도 빈번하게 업데이트되므로 프로젝트가 의존하고 있는 패키지를 일괄적으로 관리할 필요가 있다. npm은 package.json 파일을 통해서 프로젝트 정보와 패키지의 의존성을 관리한다.
+
+package.json을 생성하려면 프로젝트 루트에서 `npm init` 명령어를 실행한다.
+
+package.json에서 가장 중요한 항목은 name과 version이다. 이것으로 패키지의 고유성을 판단하므로 생략할 수 없다. 그리고 `dependencies` 항목에는 해당 프로젝트가 의존하는 패키지들의 이름과 버전을 명시한다. 여기서 의존하는 패키지란 해당 프로젝트에서 참조하는 모듈을 의미한다.
+
+`devDependencies` 에는 개발 단계에서만 사용하는 개발용 의존 패키지를 명시한다.
