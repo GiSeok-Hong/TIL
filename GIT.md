@@ -89,11 +89,17 @@
 
   ```bash
   $ git branch
-
+  
   $ git branch -r  
   ```
 
+* push 취소하기
 
+  ```
+  a
+  ```
+
+  
 
 
 
